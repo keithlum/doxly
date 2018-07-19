@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="14px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-document</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Deals" transform="translate(-16.000000, -8.000000)" fill="#808994">
+            <path d="M27.25,12.6689453 C27.25,12.5869141 27.2158203,12.5185547 27.1679688,12.4570312 L22.7929688,8.08203125 C22.7314453,8.03417969 22.6630859,8 22.5810547,8 L17.625,8 C17.1396484,8 16.75,8.38964844 16.75,8.875 L16.75,21.125 C16.75,21.6103516 17.1396484,22 17.625,22 L26.375,22 C26.8603516,22 27.25,21.6103516 27.25,21.125 L27.25,12.6689453 Z" id="icon-document"></path>
+        </g>
+    </g>
+</svg>

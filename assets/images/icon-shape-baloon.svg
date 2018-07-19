@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="29px" height="20px" viewBox="0 0 29 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-shape-baloon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components-/-Badges-/-Message-Badge" fill="#1E354A">
+            <path d="M4,10.3368574 C4,17.6666667 0,20 0,20 L13.6657364,20 L19.3342636,20 C24.6701833,20 29,15.6736637 29,10.3368574 L29,9.66314259 C29,4.32738487 24.6725024,0 19.3342636,0 L13.6657364,0 C8.3298167,0 4,4.3263363 4,9.66314259 L4,10.3368574 Z" id="icon-shape-baloon"></path>
+        </g>
+    </g>
+</svg>

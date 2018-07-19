@@ -1,0 +1,2 @@
+class OrganizationInternalUser < OrganizationUser
+end

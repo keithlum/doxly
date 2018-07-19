@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-notifications Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Layout-/-Header" transform="translate(-576.000000, -25.000000)" fill="#1E354A">
+            <g id="Notifications" transform="translate(565.000000, 15.000000)">
+                <path d="M16.5439453,22.5439453 C16.5439453,23.3505859 17.1865234,24 18,24 C18.8134766,24 19.4560547,23.3505859 19.4560547,22.5439453 L16.5439453,22.5439453 Z M24.9863281,21.1972656 C25.0136719,21.0810547 25,20.9511719 24.9179687,20.8759766 L22.375,18.3466797 L22.375,14.375 C22.375,11.9619141 20.4130859,10 18,10 C15.5869141,10 13.625,11.9619141 13.625,14.375 L13.625,18.3466797 L11.0820312,20.8759766 C11,20.9511719 10.9863281,21.0810547 11.0136719,21.1972656 C11.0615234,21.3134766 11.1777344,21.375 11.2939453,21.375 L24.7060547,21.375 C24.8222656,21.375 24.9384766,21.3134766 24.9863281,21.1972656 L24.9863281,21.1972656 Z" id="icon-notifications-Icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

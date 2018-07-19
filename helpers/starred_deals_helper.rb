@@ -1,0 +1,2 @@
+module StarredDealsHelper
+end

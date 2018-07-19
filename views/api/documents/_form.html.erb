@@ -1,0 +1,57 @@
+<%= form_for(document) do |f| %>
+  <% if document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% document.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file_name %>
+    <%= f.text_field :file_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :file_size %>
+    <%= f.number_field :file_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :file_type %>
+    <%= f.text_field :file_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :file_uploaded_at %>
+    <%= f.datetime_select :file_uploaded_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_type %>
+    <%= f.text_field :parent_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_id %>
+    <%= f.number_field :parent_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_by %>
+    <%= f.number_field :created_by %>
+  </div>
+
+  <div class="field">
+    <%= f.label :activated %>
+    <%= f.check_box :activated %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

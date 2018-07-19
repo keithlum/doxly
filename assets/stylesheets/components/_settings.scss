@@ -1,0 +1,8 @@
+.settings-wrapper{
+    @extend %clearfix;
+    border: 1px solid $col-border;
+    max-width: 460px;
+    padding: 30px;
+    margin: 0 auto;
+    background: $white;
+}

@@ -1,0 +1,37 @@
+@import 'base/vars';
+@import 'base/animations';
+@import 'base/mixins';
+@import "vendors/morris";
+@import "vendors/bootstrap-custom";
+@import "vendors/bootstrap";
+@import "vendors/bootstrap-select";
+@import "vendors/bootstrap-datetimepicker";
+
+@import "vendors/font-awesome/font-awesome";
+@import "vendors/icheck";
+//@import "vendors/slick";
+//@import "vendors/customScrollbar";
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/toc';
+@import 'base/helpers';
+@import 'base/buttons';
+
+@import "components/card-activity";
+@import "components/card-summary";
+@import "components/common";
+@import "components/chat";
+@import "components/deal";
+@import "components/deals";
+@import "components/deals-full";
+@import "components/file-viewer";
+@import "components/layout";
+@import "components/modals";
+@import "components/navbar";
+@import "components/reports";
+@import "components/statistic";
+@import "components/settings";
+@import "components/team";
+@import "components/ui";
+
+@import "wp";

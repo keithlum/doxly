@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @deal.organization_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @deal.title %>
+</p>
+
+<p>
+  <strong>Client name:</strong>
+  <%= @deal.client_name %>
+</p>
+
+<p>
+  <strong>Transaction type:</strong>
+  <%= @deal.transaction_type %>
+</p>
+
+<p>
+  <strong>Deal size:</strong>
+  <%= @deal.deal_size %>
+</p>
+
+<p>
+  <strong>Projected closing date:</strong>
+  <%= @deal.projected_close_date %>
+</p>
+
+<p>
+  <strong>Completion percent:</strong>
+  <%= @deal.completion_percent %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @deal.status %>
+</p>
+
+<p>
+  <strong>Admin user:</strong>
+  <%= @deal.admin_user_id %>
+</p>
+
+<p>
+  <strong>Activated:</strong>
+  <%= @deal.activated %>
+</p>
+
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>

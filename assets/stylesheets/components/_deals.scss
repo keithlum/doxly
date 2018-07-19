@@ -1,0 +1,136 @@
+.deals-side-panel{
+    border-top: 1px solid $col-border;
+    padding: 15px 20px 15px 20px;
+
+    h2{
+        font-size: 10px;
+        color: $col-dark-gray;
+        font-weight: 500;
+        letter-spacing: 3.05px;
+    }
+    .nav{
+        padding: 10px 0;
+
+        li{
+
+            a{
+                font-size: 12px;
+                padding: 7px 7px 7px 10px;
+                display: block;
+                border-radius: 2px;
+                color: $col-dark-gray;
+                font-weight: 500;
+                @include singleLine;
+                i{
+                    margin-right: 11px;
+                }
+            }
+            &.active{
+                a{
+                    color: $white;
+                    background: $col-blue;
+                }
+            }
+        }
+    }
+}
+
+.deal-edit{
+    background: transparent !important;
+    &:focus{
+        background: transparent !important;
+    }
+
+    a{
+        background: transparent !important;
+        &:focus{
+            background: transparent !important;
+        }
+    }
+}
+
+.project-item{
+    @extend %clearfix;
+    display: block;
+    font-size: 0;
+    padding: 10px 10px;
+
+    .item-percent{
+        display: inline-block;
+        vertical-align: top;
+        //float: left;
+        padding: 2px 5px 0;
+        width: 42px;
+    }
+    .item-body{
+        //float: left;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 42px);
+        padding: 0 0 0 5px;
+        a{
+            display: block;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        .title{
+            font-size: 12px;
+            color: $col-gray;
+
+            .timestamp{
+                float: right;
+                position: relative;
+                &:after{
+                    @extend %icomoon;
+                    @extend %icon-navigate-right;
+                    color: $col-gray-light;
+                    font-size: 10px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .copy{
+            font-weight: 300;
+            font-size: 20px;
+            color: $col-dark-gray;
+            line-height: 20px;
+
+            .star{
+                @extend %icomoon;
+                @extend .icon-icon-star;
+                line-height: 20px;
+                font-size: 12px;
+                color: $col-dark-yellow;
+                position: relative;
+                bottom: 3px;
+                left: 5px;
+            }
+        }
+    }
+    .item-body__collaborators{
+        .avatar{
+            display: inline-block;
+            border-radius: 999px;
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            &:hover{
+                opacity: 0.8;
+            }
+
+            & + .avatar{
+            }
+        }
+    }
+    .item-body__timestamp{
+        display: inline-block;
+        vertical-align: top;
+        float: right;
+    }
+
+    /*& + .project-item{
+        margin-top: 15px;
+    }*/
+}

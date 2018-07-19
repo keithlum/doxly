@@ -1,0 +1,101 @@
+// custom variables and override bootstrap variables
+$white: #fff;
+$black: #000;
+$light-blue: #00b7b6;
+$gray: #5d5d5d;
+$blue: #1e6ab4;
+$light-green: #96d019;
+$brand-success: $light-green;
+
+
+// scaffolding
+$body-bg: $white;
+$text-color: $black;
+$link-color: #3075b9;
+$link-hover-decoration: none;
+
+// typography
+$font-family-sans-serif: $font-base;
+$font-size-base: 14px;
+$line-height-base: 1.375;
+$font-size-h1: 76px;
+$font-size-h2: 56px;
+$font-size-h3: 48px;
+$font-size-h4: 24px;
+$font-size-h5: 18px;
+$font-size-h6: 14px;
+$headings-font-weight: 700;
+$headings-font-family: $font-base;
+
+// type
+$blockquote-small-color: $black;
+$blockquote-font-size: 26px;
+$blockquote-border-color: transparent;
+
+// navbar
+$navbar-default-link-color: $black;
+$navbar-default-link-hover-color: $blue;
+$navbar-default-link-active-color: $blue;
+$navbar-default-link-active-bg: transparent;
+
+// btns
+$btn-font-weight: 500;
+$btn-success-border: $light-green;
+$btn-border-radius-base: 2px;
+$btn-default-border: #D1DAE3;
+$btn-default-color: $col-blue;
+$btn-default-bg: $white;
+$btn-primary-border: $col-blue;
+$btn-primary-color: $white;
+$btn-primary-bg: $col-blue;
+$btn-info-border: #1e6ab4;
+$btn-info-color: $white;
+$btn-info-bg: transparent;
+$btn-min-width: 102px !default;
+
+// dropdowns
+//$dropdown-bg: #222;
+//$dropdown-border: #222;
+//$dropdow-fallback-border: #222;
+//$dropdown-divider-bg: $white;
+//$dropdown-link-color: $white;
+//$dropdown-link-hover-color: $blue;
+
+// tabs
+$nav-tabs-border-color: #ccc;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-active-link-hover-bg: transparent;
+$nav-tabs-active-link-hover-color: $blue;
+$nav-tabs-active-link-hover-border-color: #ccc;
+$nav-tabs-justified-link-border-color: #ccc;
+$nav-tabs-justified-active-link-border-color: transparent;
+
+// thumbnails
+$thumbnail-padding: 0;
+$thumbnail-bg: $white;
+$thumbnail-border: none;
+$thumbnail-border-radius: 0;
+$thumbnail-caption-color: $black;
+$thumbnail-caption-padding: 28px 34px 31px;
+
+// container sizes
+$grid-gutter-width: 20px;
+$container-large-desktop: (1170px + $grid-gutter-width);
+
+// media breakpoints
+$screen-lg: 1201px;
+
+//form
+$form-group-margin-bottom: 20px;
+
+// inputs
+
+$input-border-color: #D1DAE3;
+$input-border-size: 2px;
+$input-border-radius: 2px;
+$input-color-placeholder: #9B9B9B;
+$input-height-base: 40px;
+$input-line-height-base: 1;
+
+// Nav
+$nav-link-hover-bg:  $col-gray-light;

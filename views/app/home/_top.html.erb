@@ -1,0 +1,53 @@
+<nav class="navbar navbar-static-top" role="navigation">
+  <div class="navbar-brand"><%= title %></div>
+  <ul class="nav navbar-top-links navbar-right">
+    <li class="dropdown dropdown-alerts">
+      <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+        <i class="icon-icon-notifications"></i> <span class="notifications-enabled"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="#">
+            <div>
+              <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+              <span class="pull-right text-muted small">4 minutes ago</span>
+            </div>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="#">
+            <div>
+              <i class="fa fa-upload fa-fw"></i> New files uploaded
+              <span class="pull-right text-muted small">4 minutes ago</span>
+            </div>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <div class="text-center link-block">
+            <a href="notifications.html">
+              <strong>See All Alerts</strong>
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown dropdown-user">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <%= image_tag "img-avatar.jpg", class: 'img-circle navbar-avatar' %>
+        <span>Harvey Specter</span> <i class="icon-icon-navigate-down"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/setting">Settings</a>
+        </li>
+        <li>
+          <a href="/signin">Sign Out</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <%= yield :navbar_bottom %>
+</nav>

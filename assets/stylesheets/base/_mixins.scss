@@ -1,0 +1,509 @@
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+// Add hovers only for no-touch devices
+// Requires: Modernizr feature test for touch/no-touch
+@mixin no-touch-hover {
+    // Make sure you're not arleady inside a html > selector or this wont work!
+    .no-touchevents & {
+        &:hover {
+            @content;
+        }
+    }
+}
+// Example Usage:
+// a {
+//     @include no-touch-hover {
+// 	       color: black;
+//     }
+// }
+// Example would compile to html.no-touch a:hover { color: black; }
+
+@mixin list-diamond($color){
+  position: relative;
+
+  &:before{
+    content: "\25c6";
+    color: $color;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+@mixin list-circle-number($color){
+  position: relative;
+  counter-increment: step-counter;
+
+  &:before {
+    content: counter(step-counter);
+    color: $color;
+    font-size: 13px;
+    font-weight: 700;
+    @include borderRadius(999px);
+    border: 1px solid $color;
+    width: 21px;
+    height: 21px;
+    display: block;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+  }
+}
+
+@mixin hide-text {
+	text-align: left;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+@mixin center() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin blank-text {
+	font-size: 0;
+	line-height: 0;
+}
+
+@mixin responsive-image {
+	display: block;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+@mixin placeholder-color($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin position-side {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@mixin singleLine {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin arrow($direction, $color, $size-transparent, $size){
+	display: block;
+	height: 0;
+	width: 0;
+	
+	@if $direction == 'top' {
+		border-left: $size-transparent solid transparent;
+		border-right: $size-transparent solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $direction == 'right' {
+		border-top: $size-transparent solid transparent;
+		border-bottom: $size-transparent solid transparent;
+		border-left: $size solid $color;
+	} @else if $direction == 'bottom' {
+		border-top: $size solid $color;
+		border-right: $size-transparent solid transparent;
+		border-left: $size-transparent solid transparent;
+	} @else if $direction == 'left' {
+		border-top: $size-transparent solid transparent;
+		border-right: $size solid $color;
+		border-bottom: $size-transparent solid transparent;
+	} @else if $direction == 'top-left' {
+		border-top: $size solid $color;
+		border-right: $size-transparent solid transparent;
+	} @else if $direction == 'top-right' {
+		border-top: $size solid $color;
+		border-left: $size-transparent solid transparent;
+	} @else if $direction == 'bottom-left' {
+		border-bottom: $size solid $color;
+		border-right: $size-transparent solid transparent;
+	} @else if $direction == 'bottom-right' {
+		border-bottom: $size solid $color;
+		border-left: $size-transparent solid transparent;
+	}
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+	@if $vendors {
+		@each $vendor in $vendors {
+			#{"-" + $vendor + "-" + $property}: #{$value};
+		}
+	}
+	#{$property}: #{$value};
+}
+
+@mixin box-shadow($properties...) {
+	@include prefix('box-shadow', $properties);
+}
+
+@mixin box-sizing($type: border-box) {
+	@include prefix('box-sizing', $type);
+}
+
+@mixin transform($param) {
+	@include prefix('transform', $param);
+}
+
+@mixin transform-origin($param) {
+	@include prefix('transform-origin', $param);
+}
+
+@mixin transition($properties...) {
+	@if length($properties) >= 1 {
+		@include prefix('transition', $properties);
+	}
+	@else {
+		@include prefix('transition', $what: all, $length: 1s, $easing: ease-in-out);
+	}
+}
+
+$prefixes: -webkit-, -moz-, -o-, "";
+
+@mixin border-radius($size...) {
+    @if length($size) == 1 {
+        @each $prefix in $prefixes {
+            #{$prefix}border-radius: $size;
+        }
+    } @else {
+        @include customBorderRadius($size...);
+    }
+}
+
+@mixin borderRadius($size...) {
+  @if length($size) == 1 {
+	@each $prefix in $prefixes {
+	  #{$prefix}border-radius: $size;
+	}
+  } @else {
+	@include customBorderRadius($size...);
+  }
+}
+
+@mixin customBorderRadius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
+  @each $prefix in $prefixes {
+	@if $prefix == "-moz-" {
+	  @if $topLeft != 0 { -moz-border-radius-topleft: $topLeft; }
+	  @if $topRight != 0 { -moz-border-radius-topright: $topRight; }
+	  @if $bottomRight != 0 { -moz-border-radius-bottomright: $bottomRight; }
+	  @if $bottomLeft != 0 { -moz-border-radius-bottomleft: $bottomLeft; }
+	} @else {
+	  @if $topLeft != 0 { #{$prefix}border-top-left-radius: $topLeft; }
+	  @if $topRight != 0 { #{$prefix}border-top-right-radius: $topRight; }
+	  @if $bottomRight != 0 { #{$prefix}border-bottom-right-radius: $bottomRight; }
+	  @if $bottomLeft != 0 { #{$prefix}border-bottom-left-radius: $bottomLeft; }
+	}
+  }
+}
+
+@mixin breakpoint($class) {
+	@if $class == phone-small {
+		@media screen and (min-width: $phone-small+1) { @content; }
+	}
+	@else if $class == phone-landscape {
+		@media screen and (min-width: $phone-landscape) { @content; }
+	}
+	@else if $class == not-phone {
+		@media screen and (min-width: $not-phone) { @content; }
+	}
+	@else if $class == phone-xl {
+		@media screen and (min-width: $phone-xl) { @content; }
+	}
+    @else if $class == not-phone-xl {
+		@media screen and (min-width: $phone-xl+1) { @content; }
+	}
+	@else if $class == tablet {
+		@media screen and (min-width: $tablet) { @content; }
+	}
+	@else if $class == tablet-landscape {
+		@media screen and (min-width: $tablet-landscape) { @content; }
+	}
+	@else if $class == not-tablet {
+		@media screen and (min-width: $not-tablet) { @content; }
+	}
+	@else if $class == desktop {
+		@media screen and (min-width: $desktop) { @content; }
+	}
+	@else if $class == site-width {
+		@media screen and (min-width: $site-width) { @content; }
+	}
+	@else {
+		@warn "Breakpoint mixin supports: mobile, mobile-sm, nomobile, tablet, gt-tablet, desktop-sm, desktop-md, desktop-lg, desktop-xl, desktop-xxl";
+	}
+}
+
+@mixin breakpoint-size($size) {
+    @media screen and (min-width: $size) { @content; }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin bb {
+    @include box-sizing(border-box);
+}
+
+// Grayscale
+@mixin grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+}
+
+// Grayscale Remove
+@mixin grayscale-remove {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-filter: grayscale(0%);
+}
+
+@mixin background-size($size){
+    background-size: $size;
+}
+
+// Image background cover
+@mixin image-cover {
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+// Image background contain
+@mixin image-contain {
+    @include background-size(contain);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+// SVG background-images with fallback - defaults to png
+@mixin svg-image($image, $width, $height, $image-type: 'png', $position: 'center center', $repeat: 'no-repeat') {
+    background-color: transparent;
+    background-image: asset-url('#{$image-dir}#{$image}.#{$image-type}'); // Fallback png or jpg image
+    background-image: -webkit-linear-gradient(transparent, transparent), asset-url('#{$image-dir}#{$image}.svg');
+    background-image: linear-gradient(transparent, transparent), asset-url('#{$image-dir}#{$image}.svg');
+    background-position: #{$position};
+    background-repeat: #{$repeat};
+    @include background-size($width $height);
+}
+// EG: @include svg-image($image: 'payment/american_express', $width: $card-width, $height: $card-height);
+
+@mixin vertical-align($element: "div") {
+    font-size: 0;
+
+    > #{$element} {
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+@mixin wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-width;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include breakpoint($bp-not-phone) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @include breakpoint($bp-phone-xl) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    @include breakpoint($bp-tablet-landscape) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .with-padding &{
+        padding-top: 120px;
+        padding-bottom: 50px;
+
+        @include breakpoint($bp-tablet) {
+            padding-top: 150px;
+            padding-bottom: 70px;
+        }
+    }
+
+    .mini-padding &{
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+
+        @include breakpoint($bp-tablet) {
+            padding-top: 60px !important;
+            padding-bottom: 30px !important;
+        }
+    }
+
+    .no-padding &{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+}
+
+@mixin content-typography{
+    h1{
+        text-align: left;
+        font-size: 42px;
+        line-height: 1;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+    h2{
+        text-align: center;
+        font-size: 40px;
+        line-height: 1;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    h3{
+        font-size: 24px;
+        @include breakpoint($bp-tablet){
+
+            text-align: center;
+        }
+    }
+
+    h6{
+
+    }
+    .subtitle{
+        color: $col-font-std;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 25px;
+        @include breakpoint($bp-tablet){
+            font-size: 18px;
+        }
+    }
+    ul{
+        list-style: disc;
+        padding-left: 15px;
+        margin-bottom: 30px;
+        @include breakpoint($bp-tablet){
+            margin-bottom: 30px;
+        }
+        li{
+            font-size: 12px;
+            line-height: 22px;
+            letter-spacing: 0.025em;
+        }
+    }
+
+    p{
+        color: $col-font-std;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: 0.025em;
+        text-align: left;
+        margin: 0 0 30px 0;
+
+        b{
+            font-weight: 400;
+        }
+        i{
+            font-style: normal;
+        }
+    }
+    img{
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        &.alignleft{
+            display: block;
+            max-width: 47%;
+            margin: 0 6% 6% 0;
+
+            @include breakpoint($bp-tablet){
+                margin: 0 30px 25px 0;
+                float: left;
+                top: 8px;
+                max-width: 370px;
+            }
+        }
+
+        &.alignright{
+            display: block;
+            max-width: 47%;
+            margin: 0 0 6% 6%;
+
+            @include breakpoint($bp-tablet){
+                max-width: 370px;
+                margin: 0  0 30px 30px;
+                float: right;
+                top: 8px;
+            }
+        }
+    }
+
+    @include breakpoint($bp-tablet){
+        h2{
+            font-size: 55px;
+        }
+        p{
+            line-height: 30px;
+        }
+    }
+}
+
+%content-typography{
+    @include content-typography;
+}
+
+%bb {
+    @include bb;
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+%wrap {
+    @include wrap;
+}

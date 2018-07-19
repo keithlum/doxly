@@ -1,0 +1,178 @@
+.file-viewer{
+    @extend %clearfix;
+}
+
+.file-viewer__close{
+    display: inline-block;
+    background: $col-red;
+    color: $col-dark-red;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 999px;
+    margin-right: 10px;
+    i{
+        line-height: 20px;
+    }
+}
+
+.file-viewer__title{
+    display: inline-block;
+    .title{
+        font-weight: 300;
+        font-size: 16px;
+        color: $col-dark-gray;
+    }
+    .meta{
+        font-size: 12px;
+        color: $col-gray;
+    }
+}
+
+.file-viewer__toolbox{
+    @extend %clearfix;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: $white;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.10), 0px 1px 0px 0px rgba(0,0,0,0.10);
+
+    .toolbox-left{
+        @extend %clearfix;
+        float: left;
+        width: calc(100% - 300px);
+        display: inline-block;
+        padding-right: 10px;
+        > * {
+            vertical-align: middle;
+        }
+    }
+
+    .toolbox-right{
+        display: inline-block;
+        float: right;
+        width: 300px;
+        border-left: 1px solid $col-border;
+        padding-left: 10px;
+    }
+
+    .buttons{
+        float: right;
+        display: inline-block;
+        text-align: right;
+
+        .btn{
+            min-width: auto;
+        }
+    }
+    .chat-box{
+        padding: 0;
+        border: 0px none;
+        .chat-box-toggle{
+            padding: 0;
+            border: 0px none;
+        }
+    }
+}
+.content-document{
+    .document{
+        margin: 0 auto;
+    }
+
+    .panel-changes{
+        border: 1px solid $col-border;
+        padding: 20px;
+
+        .title{
+            font-weight: 500;
+            font-size: 12px;
+            color: $col-dark-blue;
+            margin-bottom: 12px;
+        }
+
+        .change-item{
+            @extend %clearfix;
+            margin-bottom: 5px;
+            padding: 10px 60px;
+            border-radius: 6px;
+            position: relative;
+
+            &.added{
+                background: $col-green-light;
+                border: 1px solid $col-green;
+                position: relative;
+                &:before{
+                    @extend %icomoon;
+                    @extend %icon-plus;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 10px;
+                    text-align: center;
+                    border-radius: 999px;
+                    background: $col-green;
+                    color: $white;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                }
+            }
+
+            &.removed{
+                background: $col-red-light;
+                border: 1px solid $col-red;
+                position: relative;
+                &:before{
+                    @extend %icomoon;
+                    @extend %icon-minus;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 3px;
+                    text-align: center;
+                    border-radius: 999px;
+                    background: $col-red;
+                    color: $white;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                }
+            }
+
+            .section{
+                float: left;
+                width: 40%;
+
+                p{
+                    color: $black;
+                    font-weight: 800;
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
+            }
+            .details{
+                float: left;
+                width: 60%;
+
+                p{
+                    text-align: justify;
+                    color: $black;
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+.content-file-viewer-left{
+    .version-select{
+        float: left;
+        padding: 10px;
+    }
+}

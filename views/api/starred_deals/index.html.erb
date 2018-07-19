@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Starred Deals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Deal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @starred_deals.each do |starred_deal| %>
+      <tr>
+        <td><%= starred_deal.user_id %></td>
+        <td><%= starred_deal.deal_id %></td>
+        <td><%= link_to 'Show', starred_deal %></td>
+        <td><%= link_to 'Edit', edit_starred_deal_path(starred_deal) %></td>
+        <td><%= link_to 'Destroy', starred_deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Starred Deal', new_starred_deal_path %>

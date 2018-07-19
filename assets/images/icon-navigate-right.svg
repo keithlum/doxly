@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="7px" height="10px" viewBox="0 0 7 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-navigate-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Disclosure-Icon" fill="#D1DAE3">
+            <path d="M1.59370425,0.05859375 L0.0614934114,1.51855469 C-0.0204978038,1.59667969 -0.0204978038,1.73828125 0.0614934114,1.81640625 L3.40263543,5 L0.0614934114,8.18359375 C-0.0204978038,8.26171875 -0.0204978038,8.40332031 0.0614934114,8.48144531 L1.59370425,9.94140625 C1.67569546,10.0244141 1.82430454,10.0244141 1.90629575,9.94140625 L6.93850659,5.15136719 C7.0204978,5.06835938 7.0204978,4.93164062 6.93850659,4.84863281 L1.90629575,0.05859375 C1.8601757,0.0244140625 1.81405564,0 1.75256223,0 C1.69106881,0 1.6398243,0.0244140625 1.59370425,0.05859375 Z" id="icon-navigate-right"></path>
+        </g>
+    </g>
+</svg>

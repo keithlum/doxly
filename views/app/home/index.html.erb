@@ -1,0 +1,258 @@
+<div id="wrapper">
+  <%= render "left" %>
+  <div id="page-wrapper">
+    <%= render partial: "top", locals: {title: 'Dashboard'} %>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="statistic-box">
+            <div class="statistic-box__item">
+              <i>22</i><span>ACTIVE DEALS</span>
+            </div>
+            <div class="statistic-box__item">
+              <i>243</i><span>ARCHIVED DEALS</span>
+            </div>
+            <div class="statistic-box__item">
+              <i>131</i><span>TEAM MEMBERS</span>
+            </div>
+            <div class="statistic-box__item">
+              <i>424</i><span>OUTSIDE COLLABORATORS</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-left">
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">Document Signed</h3><i class="timestamp">2/29/2016</i>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>PROJECT PANDA : CLOSING:</b> Pre-Closing : Term Sheet
+                </div>
+                <div class="section-details">
+                  <div class="section-details__document signed">
+                    <h4>Term Sheet <span class="badge">V9</span></h4>
+                    <div class="section-details__collaborators">
+                      <a href="#"><%= image_tag "img-avatar-1.png" %></a>
+                      <a href="#"><%= image_tag "img-avatar-2.png" %></a>
+                      <a href="#"><%= image_tag "img-avatar-6.png" %></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">Comment Added</h3><i class="timestamp">2/29/2016</i>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>PROJECT PANDA : CLOSING: Corporate Structure, Equity Capital & Records : Meeting Minutes</b>
+                </div>
+                <div class="section-details">
+                  <div class="section-details__comment comment-to">
+                    <div class="comment-avatar">
+                      <%= image_tag "img-avatar-4.png" %>
+                    </div>
+                    <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">New Document Version Uploaded</h3><i class="timestamp">2/29/2016</i>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>PROJECT PANDA : CLOSING:</b> Pre-Closing : Term Sheet
+                </div>
+                <div class="section-details">
+                  <div class="section-details__attachment">
+                    <div class="attachment-item item-file">
+                      <i></i><a href="#">Term Sheet</a>
+                      <span class="badge">V9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">Document Uploaded</h3>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>PROJECT PANDA : CLOSING: Corporate Structure, Equity Capital & Records : Meeting Minutes</b>
+                </div>
+                <div class="section-details">
+                  <div class="section-details__attachment">
+                      <div class="attachment-item item-file">
+                        <i></i><a href="#">Subcompany A</a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">Collaborator Added</h3>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>PROJECT PANDA</b>
+                </div>
+                <div class="section-details">
+                  <div class="section-details__collaborator">
+                    <a href="#">
+                      <div class="avatar">
+                        <%= image_tag "img-avatar-5.png" %>
+                      </div>
+                      <h4>Alvin Jones</h4>
+                      <span>Ice Miller</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">Comment Added</h3><i class="timestamp">2/29/2016</i>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>DILIGENCE: Corporate Structure, Equity Capital & Records : Meeting Minutes</b>
+                </div>
+                <div class="section-details">
+                  <div class="section-details__comment comment-from">
+                    <div class="comment-avatar">
+                      <%= image_tag "img-avatar-5.png" %>
+                    </div>
+                    <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel activity-card">
+              <div class="panel-heading">
+                <h3 class="category">Comment Added</h3><i class="timestamp">2/29/2016</i>
+              </div>
+              <div class="panel-body">
+                <div class="section-info">
+                  <b>PROJECT PANDA : CLOSING: Corporate Structure, Equity Capital & Records : Meeting Minutes</b>
+                </div>
+                <div class="section-details">
+                  <div class="section-details__comment comment-to">
+                    <div class="comment-avatar">
+                      <%= image_tag "img-avatar-4.png" %>
+                    </div>
+                    <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <div class="panel summary-card">
+              <div class="panel-heading">
+                <h3 class="category">DEALS NEARING COMPLETION</h3>
+              </div>
+              <div class="panel-body">
+                <div class="summary-projects">
+                  <div class="project-item">
+                    <div class="item-percent">
+                      <div class="progress-pie-chart" data-percent="75"></div>
+                    </div>
+                    <div class="item-body">
+                      <a href="/deals/1" class="item-body__project">
+                        <div class="title">Panda Express <span class="timestamp">March 27th</span></div>
+                        <div class="copy">Project Panda <span class="star"></span></div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="project-item">
+                    <div class="item-percent">
+                      <div class="progress-pie-chart" data-percent="50"></div>
+                    </div>
+                    <div class="item-body">
+                      <a href="/deals/1" class="item-body__project">
+                        <div class="title">Cordellia Webb <span class="timestamp">March 18th</span></div>
+                        <div class="copy">Project Narwhal</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel summary-card">
+              <div class="panel-heading">
+                <h3 class="category">DEALS BEHIND SCHEDULE</h3>
+              </div>
+              <div class="panel-body">
+                <div class="summary-projects">
+                  <div class="project-item">
+                    <div class="item-percent">
+                      <div class="progress-pie-chart" data-percent="75"></div>
+                    </div>
+                    <div class="item-body">
+                      <a href="/deals/1" class="item-body__project">
+                        <div class="title">Mitchell Torres <span class="timestamp">January 31th</span></div>
+                        <div class="copy">Project Dark Knight</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel summary-card">
+              <div class="panel-heading">
+                <h3 class="category">RECENTLY UPDATED FILES</h3>
+              </div>
+              <div class="panel-body">
+                <div class="summary-files">
+                  <div class="item item-file">
+                    <a href="#" class="details">
+                      <i>A Really Long File Name There Will Be</i>
+                      <span>Added by Alvin Jones at Ice Miller</span>
+                    </a>
+                  </div>
+
+                  <div class="item item-folder">
+                    <a href="#" class="details">
+                      <i>Job Descriptions</i>
+                      <span>Added by Harvey Specter at Pearson</span>
+                    </a>
+                  </div>
+
+                  <div class="item item-file">
+                    <a href="#" class="details">
+                      <i>Roslynborough</i>
+                      <span>Added by Alvin Jones at Ice Miller</span>
+                    </a>
+                  </div>
+
+                  <div class="item item-file">
+                    <a href="#" class="details">
+                      <i href="#">Lake Stephanyton</i>
+                      <span>Added by Alvin Jones at Ice Miller</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

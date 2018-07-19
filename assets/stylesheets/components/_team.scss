@@ -1,0 +1,73 @@
+.panel-team-description{
+    padding: 20px;
+    border: 1px solid $col-border;
+
+    .inner{
+        position: relative;
+    }
+
+    .btn-edit{
+        float: right;
+    }
+}
+
+.panel-teams-list{
+    padding: 20px;
+    border: 1px solid $col-border;
+
+    .inner{
+        position: relative;
+    }
+
+    .team-list-item{
+        @extend %clearfix;
+        position: relative;
+        font-size: 0;
+        .team{
+            //float: left;
+            display: inline-block;
+            vertical-align: middle;
+            width: calc((100% - 50px) / 2);
+        }
+        .stat{
+            //float: left;
+            display: inline-block;
+            vertical-align: middle;
+            width: calc((100% - 50px) / 2);
+        }
+        .actions{
+            //float: right;
+            display: inline-block;
+            width: 50px;
+            text-align: right;
+            height: 100%;
+            vertical-align: middle;
+
+            @include vertical-align('a');
+            a{
+                font-size: 16px;
+                color: $col-gray-light;
+
+                &:hover{
+                    color: $col-gray;
+                }
+            }
+        }
+
+        & + .team-list-item{
+            margin-top: 20px;
+        }
+    }
+
+}
+
+.team-stat-item{
+    font-weight: 300;
+    font-size: 14px;
+    color: $col-gray;
+    b{
+        font-weight: 300;
+        font-size: 18px;
+        color: $col-dark-blue;
+    }
+}

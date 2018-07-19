@@ -1,0 +1,133 @@
+/* iCheck plugin Square skin, green
+----------------------------------- */
+.i-checks-box{
+    &.checkbox{
+        label{
+            padding-left: 0;
+            font-size: 12px;
+        }
+    }
+}
+
+.icheckbox_box,
+.iradio_box {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    background: $white;
+}
+
+.icheckbox_box {
+    border: 1px solid $col-gray-light;
+    transition: border .3s ease, background .3s ease;
+    &.hover{
+        border: 1px solid $col-blue;
+    }
+    &.checked{
+        border: 1px solid $col-blue;
+        background: $col-blue-light;
+        &:after{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            line-height: 18px !important;
+            text-align: center;
+            color: $col-blue;
+            font-size: 8px;
+            @extend %icomoon;
+            @extend %icon-check;
+        }
+        &.disabled{
+            background: $col-gray-light;
+            &:after{
+                color: $col-gray-hover;
+            }
+        }
+    }
+    &.disabled{
+        cursor: default;
+    }
+}
+
+.iradio_box {
+    transition: border .3s ease, background .3s ease;
+    color: $white;
+
+    &.hover{
+    }
+    &.checked{
+        color: $col-dark-blue;
+        &:after{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            line-height: 18px !important;
+            text-align: center;
+
+            font-size: 8px;
+            @extend %icomoon;
+            @extend %icon-check;
+        }
+        &.disabled{
+            &:after{
+                color: $col-gray-hover;
+            }
+        }
+    }
+    &.disabled{
+        cursor: default;
+    }
+}
+
+.icheckbox_square-green.hover {
+    background-position: -24px 0;
+}
+.icheckbox_square-green.checked {
+    background-position: -48px 0;
+}
+.icheckbox_square-green.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+.icheckbox_square-green.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-green {
+    background-position: -120px 0;
+}
+.iradio_square-green.hover {
+    background-position: -144px 0;
+}
+.iradio_square-green.checked {
+    background-position: -168px 0;
+}
+.iradio_square-green.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+.iradio_square-green.checked.disabled {
+    background-position: -216px 0;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_square-green,
+    .iradio_square-green {
+        background-image: asset-url('green@2x.png');
+        -webkit-background-size: 240px 24px;
+        background-size: 240px 24px;
+    }
+}

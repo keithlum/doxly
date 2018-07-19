@@ -1,0 +1,248 @@
+<div id="wrapper">
+  <%= render "left" %>
+    <div id="page-wrapper">
+      <%= render partial: "top", locals: {title: 'Reports'} %>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-12">
+                  <div class="panel panel-report">
+                      <div class="title">
+                          <h4>Deals by Type</h4>
+                          <div class="period">
+                              <select name="report_1_period" class="selectpicker form-control show-tick">
+                                  <option>Last 6 Months</option>
+                                  <option>Last 3 Months</option>
+                                  <option>Last Month</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="report" id="report_1">
+                      </div>
+                      <div class="report-legend" id="report_legend_1"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-xs-12 col-md-6">
+                  <div class="panel panel-report">
+                      <div class="title">
+                          <h4>Deals Size</h4>
+                          <div class="period">
+                              <select name="report_2_period" class="selectpicker form-control show-tick">
+                                  <option>Last 6 Months</option>
+                                  <option>Last 3 Months</option>
+                                  <option>Last Month</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="report" id="report_2">
+                      </div>
+                      <div class="report-legend" id="report_legend_2"></div>
+                  </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                  <div class="panel panel-report">
+                      <div class="title">
+                          <h4>Deals by Team Members</h4>
+                      </div>
+                      <div class="team-report">
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><%= image_tag "img-avatar-5.png" %></div>
+                                          <h4>Harvey Specter</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">1,2,4,16,8,2,9,12,16,10</div>
+                              </div>
+                          </div>
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><div class="no-photo">AV</div></div>
+                                          <h4>Alex Vaughn</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">4,2,4,6,8,2,6,2,6,8</div>
+                              </div>
+                          </div>
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><%= image_tag "img-avatar-5.png" %></div>
+                                          <h4>Harvey Specter</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">1,2,3,6,8,12,19,22,26,30</div>
+                              </div>
+                          </div>
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><div class="no-photo">AV</div></div>
+                                          <h4>Alex Vaughn</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">5,5,4,6,8,2,9,12,10,13</div>
+                              </div>
+                          </div>
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><%= image_tag "img-avatar-5.png" %></div>
+                                          <h4>Harvey Specter</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">1,2,14,16,18,12,9,2,6,10</div>
+                              </div>
+                          </div>
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><div class="no-photo">AV</div></div>
+                                          <h4>Alex Vaughn</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">1,2,4,6,8,10,9,8,6,1</div>
+                              </div>
+                          </div>
+
+                          <div class="team-list-item">
+                              <div class="team">
+                                  <div class="team-member-item mini">
+                                      <a href="#">
+                                          <div class="avatar"><%= image_tag "img-avatar-5.png" %></div>
+                                          <h4>Harvey Specter</h4>
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="stat">
+                                  32
+                              </div>
+                              <div class="graph">
+                                  <div class="report-user-bars">1,2,4,1,2,2,4,3,6,3</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+
+  <script>
+      setTimeout(function(){
+          (function ($) {
+              var report1 = Morris.Bar({
+                  element: 'report_1',
+                  data: [
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 1, p3: 2, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 1, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 3, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 4, p3: 4, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 3, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 1, p3: 1, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 3, p3: 2, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 4, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 5, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 5, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 4, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 4, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 1, p3: 2, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 3, p3: 2, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 4, p3: 1, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 5, p3: 2, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 3, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 4, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 1, p3: 3, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '01/03/15', p1: 3, p2: 2, p3: 6, p4: 1, p5: 5, p6: 3, p7:1},
+                      {x: '07/07/15', p1: 3, p2: 2, p3: 3, p4: 1, p5: 5, p6: 3, p7:1}
+                  ],
+                  xkey: 'x',
+                  ykeys: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7'],
+                  labels: ['M&A', 'Venture Capital', 'Commercial Lending', 'Etc', 'Other Type', 'TBD', 'Flexible Category Type'],
+                  stacked: true,
+                  hideHover: true
+              });
+
+              report1.options.labels.forEach(function(label, i){
+                  var legendItem = $('<span></span>').css('background', report1.options.barColors[i]),
+                          legendText = $('<i></i>').text(label);
+                  $('#report_legend_1').append(legendItem).append(legendText);
+              })
+
+              var report2 = Morris.Area({
+                  element: 'report_2',
+                  data: [
+                      {x: '01/03/15', p1: 0, p2: 0, p3: 0, p4: 0, p5: 0, p6: 0, p7:0},
+                      {x: '02/03/15', p1: 1, p2: 1, p3: 1, p4: 1, p5: 1, p6: 1, p7:1},
+                      {x: '03/03/15', p1: 2, p2: 2, p3: 2, p4: 2, p5: 2, p6: 2, p7:2},
+                      {x: '04/03/15', p1: 3, p2: 3, p3: 3, p4: 1, p5: 5, p6: 3, p7:6},
+                      {x: '05/03/15', p1: 3, p2: 4, p3: 4, p4: 9, p5: 10, p6: 6, p7:9},
+                      {x: '06/03/15', p1: 5, p2: 8, p3: 6, p4: 17, p5: 12, p6: 9, p7:12},
+                      {x: '07/03/15', p1: 8, p2: 12, p3: 8, p4: 22, p5: 16, p6: 14, p7:17},
+                      {x: '08/03/15', p1: 10, p2: 16, p3: 12, p4: 24, p5: 18, p6: 19, p7:24},
+                      {x: '09/03/15', p1: 15, p2: 22, p3: 16, p4: 29, p5: 23, p6: 23, p7:32}
+                  ],
+                  xkey: 'x',
+                  ykeys: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7'],
+                  labels: ['M&A', 'Venture Capital', 'Commercial Lending', 'Etc', 'Other Type', 'TBD', 'Flexible Category Type'],
+                  hideHover: true,
+                  smooth: false
+              });
+
+              $('.report-user-bars').peity('bar', {
+                  fill: ['#0BADFF'],
+                  padding: 0,
+                  height: 20
+              });
+              //$('.inlinebar').sparkline('html', {type: 'bar', barColor: 'red'} );
+          }(jQuery));
+
+      }, 1300)
+
+  </script>

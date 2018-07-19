@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @starred_deal.user_id %>
+</p>
+
+<p>
+  <strong>Deal:</strong>
+  <%= @starred_deal.deal_id %>
+</p>
+
+<%= link_to 'Edit', edit_starred_deal_path(@starred_deal) %> |
+<%= link_to 'Back', starred_deals_path %>

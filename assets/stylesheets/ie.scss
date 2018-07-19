@@ -1,0 +1,10 @@
+@import "_vars";
+@import "_mixins";
+
+
+.accordion li.open h3:after,
+#content .accordion li.open h3:after { display:none; }
+.chk-area span:before,
+.rad-area span:before { display:none; }
+.chk-checked span:before,
+.rad-checked span:before { display:block; }

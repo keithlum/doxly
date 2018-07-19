@@ -1,0 +1,415 @@
+<div id="wrapper" class="file-viewer">
+        <div id="page-wrapper">
+            <div class="file-viewer__toolbox">
+                <div class="toolbox-left">
+                    <a href="#" class="file-viewer__close"><i class="icon-icon-close"></i></a>
+                    <div class="file-viewer__title">
+                        <div class="title">
+                            Term Sheet <span class="badge-signed signed">3/3 signed</span>
+                        </div>
+                        <div class="meta">
+                            V9 Uploaded 3/23/2016 at 3:13 AM by Ice Miller
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn btn-default">...</a>
+                        <a href="#" class="btn btn-default">Download</a>
+                    </div>
+                </div>
+                <div class="toolbox-right">
+                    <div class="chat-box" data-target="#chat-box-1">
+                        <div class="chat-box-toggle">
+                            <div class="btn-group">
+                                <a class="btn toggle-active" href="#deal-chat-internal">Internal Chat</a>
+                                <a class="btn" href="#deal-chat-external">External Chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -->
+                    <div class="content-file-viewer">
+                        <div class="content-file-viewer-wrapper">
+                            <div class="content-file-viewer-left">
+                                <div class="clearfix">
+                                    <div class="version-select">
+                                        <form>
+                                            <div class="form-group optional">
+                                                <select name="file_vestion" class="selectpicker form-control show-tick">
+                                                    <option selected="selected">Version 9 (Current)</option>
+                                                    <option>Version 8</option>
+                                                    <option>Version 7</option>
+                                                    <option>Version 6</option>
+                                                    <option>Version 5</option>
+                                                    <option>Version 4</option>
+                                                    <option>Version 3</option>
+                                                    <option>Version 2</option>
+                                                    <option>Version 1</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <ul class="nav flat-button-tabs pull-right" role="tablist">
+                                        <li role="presentation" class="active"><a href="#tab-file-view" aria-controls="tab-file-view" role="tab" data-toggle="tab">Document View</a></li>
+                                        <li role="presentation"><a href="#tab-file-changes" aria-controls="tab-file-changes" role="tab" data-toggle="tab">Changes View</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="tab-file-view">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="content-document">
+                                                    <%= image_tag "document-image-1.jpg", class: "document" %>
+                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="tab-file-changes">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="content-document">
+                                                    <div class="panel panel-changes">
+                                                        <div class="title">Change 1 : Page 1</div>
+                                                        <div class="change-item removed">
+                                                            <div class="section">
+                                                                <p>What is Lorem Ipsum</p>
+                                                            </div>
+                                                            <div class="details">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="change-item added">
+                                                            <div class="section">
+                                                                <p>What is Lorem Ipsum</p>
+                                                            </div>
+                                                            <div class="details">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-file-viewer-right">
+                                <div class="chat-box chat-box-small" id="chat-box-1">
+                                    <div class="chat-box-details">
+                                        <div class="chat-box-details__instance internal toggle-active" id="deal-chat-internal">
+                                            <div class="chat-box__recipients">
+                                                <div class="chat-box__recipients-wrapper">
+                                                    <div class="recipients-items">
+                                                        <a href="#" class="avatar"><%= image_tag "img-avatar-2.png" %></a>
+                                                        <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                                    </div>
+                                                    <a href="#" class="recipient-add"><i class="icon-icon-plus-circle"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box__messages">
+                                                <div class="comment-item comment-to">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                    <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                                <div class="comment-item comment-from">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                    <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                                <div class="comment-item comment-to">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                    <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box__send">
+                                                <form>
+                                                    <input class="chat-box__message form-control" name="send_message_internal"/>
+                                                    <a class="btn btn-primary" href="#">Send</a>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="chat-box-details__instance external" id="deal-chat-external">
+                                            <div class="chat-box__recipients">
+                                                <div class="chat-box__recipients-wrapper">
+                                                    <div class="recipients-items">
+                                                        <a href="#" class="avatar"><%= image_tag "img-avatar-2.png" %></a>
+                                                        <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                                    </div>
+                                                    <a href="#" class="recipient-add"><i class="icon-icon-plus-circle"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box__messages">
+                                                <div class="comment-item comment-to">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                    <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                                <div class="comment-item comment-from">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                    <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                                <div class="comment-item comment-to">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                    <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                                <div class="comment-item comment-from">
+                                                    <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                    <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                    <div class="timestamp">March 23 at 1:21 PM</div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-box__send">
+                                                <form>
+                                                    <input class="chat-box__message form-control" name="send_message_internal"/>
+                                                    <a class="btn btn-primary" href="#">Send</a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- -->
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modal-edit-deal" tabindex="-1" role="dialog" aria-labelledby="modal-edit-deal-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-edit-deal-label">Edit Deal</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="input-deal-title">Deal Title</label>
+                                        <input value="Project Panda" type="text" name="deal_title" id="input-deal-title" class="form-control" placeholder="Give your task a title" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-client">Client Name</label>
+                                        <input value="Panda Express" type="text" name="deal_client" id="input-deal-client" class="form-control" placeholder="Add your client's name or other identifier" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-date">Projected Close Date</label>
+                                        <input value="07/24/16" type="text" name="deal_date" id="input-deal-date" class="form-control" placeholder="MM/DD/YYYY" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-transaction">Transaction Type</label>
+                                        <select id="input-deal-transaction" class="selectpicker form-control show-tick">
+                                            <option selected="selected">Merger</option>
+                                            <option>Type 2</option>
+                                            <option>Type 3</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-size">Deal Size</label>
+                                        <input value="$1,500,000,000" type="text" name="deal_size" id="input-deal-size" class="form-control" placeholder="$" required="">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="input-deal-collaborators">Collaborators</label>
+                                        <input type="text" name="deal_collaborators_input" id="input-deal-collaborators" class="form-control" placeholder="Enter a name or email address"/>
+                                        <div class="deal-collaborators-widget">
+                                            <ul>
+                                                <li data-collaborator-id="1">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-2.png", class: "avatar" %>
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="5">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-3.png", class: "avatar" %> Harvey Specter
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="9">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-4.png", class: "avatar" %> Rebecca Moss
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="12">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-5.png", class: "avatar" %> Louisa Curtis
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="18">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-6.png", class: "avatar" %> Cecilia Hopkins
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="92">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-1.png", class: "avatar" %> Alvin Jones
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-new-section" tabindex="-1" role="dialog" aria-labelledby="modal-new-section-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-section-label">New Section</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-section-title">Section Title</label>
+                            <input type="text" name="deal_title" id="input-section-title" class="form-control" placeholder="Give your section a title" required="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-new-task" tabindex="-1" role="dialog" aria-labelledby="modal-new-task-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-task-label">New Task</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-task-title">Task Title</label>
+                            <input type="text" name="task_title" id="input-task-title" class="form-control" placeholder="Give your task a title" required="">
+                        </div>
+                        <div class="form-group optional">
+                            <label for="input-task-desc">Task Description</label>
+                            <textarea rows="5" name="task_desc" id="input-task-desc" class="form-control" placeholder="Explain this task" ></textarea>
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-task-section">Add to Section</label>
+                            <select name="task_section" id="input-task-section" class="selectpicker form-control show-tick">
+                                <option>Select a Section</option>
+                                <option>Section 1</option>
+                                <option>Section 2</option>
+                                <option>Section 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-task-assignee">Add an Assignee</label>
+                            <select name="task_assignee" id="input-task-assignee" class="selectpicker form-control show-tick">
+                                <option>Select a Team Member</option>
+                                <option>Team Member 1</option>
+                                <option>Team Member 2</option>
+                                <option>Team Member 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-new-file" tabindex="-1" role="dialog" aria-labelledby="modal-new-file-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-file-label">New Section</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-section-title">Upload</label>
+                            <input class="file-inputs" type="file" name="file_name" id="input-file-title" title="<i class='icon-icon-uploadcloud'></i> Choose a File" data-filename-placement="inside">
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-file-section">Add to Section</label>
+                            <select name="file_section" id="input-file-section" class="selectpicker form-control show-tick">
+                                <option>Select a Section</option>
+                                <option>Section 1</option>
+                                <option>Section 2</option>
+                                <option>Section 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-new-folder" tabindex="-1" role="dialog" aria-labelledby="modal-new-folder-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-folder-label">New Folder</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-folder-title">Folder Name</label>
+                            <input type="text" name="folder_name" id="input-folder-title" class="form-control" placeholder="Give your folder a name" required="">
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-folder-section">Add to Section</label>
+                            <select name="folder_section" id="input-folder-section" class="selectpicker form-control show-tick">
+                                <option>Select a Section</option>
+                                <option>Section 1</option>
+                                <option>Section 2</option>
+                                <option>Section 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>

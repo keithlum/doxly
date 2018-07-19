@@ -1,0 +1,93 @@
+.deal-collaborators-widget{
+    width: 100%;
+    border: $input-border-size solid $input-border-color;
+    padding: 5px;
+    border-radius: $input-border-radius;
+    overflow: hidden;
+    margin-top: -2px;
+    ul{
+        padding: 0;
+        list-style: none;
+        margin: -2px;
+        overflow: hidden;
+
+        li{
+            display: inline-block;
+            padding: 2px;
+
+            a{
+                padding: 5px;
+                display: block;
+                line-height: 20px;
+                border-radius: 2px;
+                background: $col-blue;
+                color: $white;
+                font-weight: 500;
+                font-size: 10px;
+                position: relative;
+
+                .avatar{
+                    display: inline-block;
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    overflow: hidden;
+                    border-radius: 999px;
+                    margin-right: 5px;
+                    z-index: 1;
+                }
+
+
+                &:hover{
+                    background: $col-dark-blue;
+
+                    &:after{
+                        @extend %icomoon;
+                        @extend %icon-close;
+                        z-index: 3;
+                        font-size: 8px;
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        margin-top: -4px;
+                    }
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    &.optional{
+        label{
+            width: 100%;
+            position: relative;
+
+            &:after{
+                float: right;
+                color: $col-gray;
+                content: "Optional";
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.btn-fileinput{
+    width: 100%;
+    border: $input-border-size solid $input-border-color;
+    border-radius: $input-border-radius;
+    color: $col-gray;
+    text-align: left;
+}

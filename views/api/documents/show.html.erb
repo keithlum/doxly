@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>File name:</strong>
+  <%= @document.file_name %>
+</p>
+
+<p>
+  <strong>File size:</strong>
+  <%= @document.file_size %>
+</p>
+
+<p>
+  <strong>File type:</strong>
+  <%= @document.file_type %>
+</p>
+
+<p>
+  <strong>File uploaded at:</strong>
+  <%= @document.file_uploaded_at %>
+</p>
+
+<p>
+  <strong>Parent type:</strong>
+  <%= @document.parent_type %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @document.parent_id %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @document.created_by %>
+</p>
+
+<p>
+  <strong>Activated:</strong>
+  <%= @document.activated %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

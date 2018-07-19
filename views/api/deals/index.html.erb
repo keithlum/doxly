@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organization</th>
+      <th>Title</th>
+      <th>Client name</th>
+      <th>Transaction type</th>
+      <th>Deal size</th>
+      <th>Projected closing date</th>
+      <th>Completion percent</th>
+      <th>Status</th>
+      <th>Admin user</th>
+      <th>Activated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deals.each do |deal| %>
+      <tr>
+        <td><%= deal.organization_id %></td>
+        <td><%= deal.title %></td>
+        <td><%= deal.client_name %></td>
+        <td><%= deal.transaction_type %></td>
+        <td><%= deal.deal_size %></td>
+        <td><%= deal.projected_close_date %></td>
+        <td><%= deal.completion_percent %></td>
+        <td><%= deal.status %></td>
+        <td><%= deal.admin_user_id %></td>
+        <td><%= deal.activated %></td>
+        <td><%= link_to 'Show', deal %></td>
+        <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+        <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deal', new_deal_path %>

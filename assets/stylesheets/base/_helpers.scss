@@ -1,0 +1,112 @@
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 90, 100, 110, 120, 130);
+
+@mixin generate-margin-bottom() {
+  @each $space in $spaceamounts {
+    .mb-#{$space} {
+      margin-bottom: #{$space}px !important;
+    }
+  }
+}
+@mixin generate-margin-right() {
+  @each $space in $spaceamounts {
+    .mr-#{$space} {
+      margin-right: #{$space}px !important;
+    }
+  }
+}
+@mixin generate-margin-left() {
+  @each $space in $spaceamounts {
+    .ml-#{$space} {
+      margin-left: #{$space}px !important;
+    }
+  }
+}
+@mixin generate-margin-top() {
+  @each $space in $spaceamounts {
+    .mt-#{$space} {
+      margin-top: #{$space}px !important;
+    }
+  }
+}
+@mixin generate-padding-top() {
+  @each $space in $spaceamounts {
+    .pt-#{$space} {
+      padding-top: #{$space}px !important;
+    }
+  }
+}
+@mixin generate-padding-bottom() {
+  @each $space in $spaceamounts {
+    .pb-#{$space} {
+      padding-bottom: #{$space}px !important;
+    }
+  }
+}
+@mixin generate-margin-bottom-tablet() {
+    @each $space in $spaceamounts {
+        .mb-#{$space}-tablet {
+            @include breakpoint($bp-tablet){
+                margin-bottom: #{$space}px !important;
+            }
+        }
+    }
+}
+@mixin generate-margin-right-tablet() {
+    @each $space in $spaceamounts {
+        .mr-#{$space}-tablet {
+            @include breakpoint($bp-tablet){
+                margin-right: #{$space}px !important;
+            }
+        }
+    }
+}
+@mixin generate-margin-left-tablet() {
+    @each $space in $spaceamounts {
+        .ml-#{$space}-tablet {
+            @include breakpoint($bp-tablet) {
+                margin-left: #{$space}px !important;
+            }
+        }
+    }
+}
+@mixin generate-margin-top-tablet() {
+    @each $space in $spaceamounts {
+        .mt-#{$space}-tablet {
+            @include breakpoint($bp-tablet) {
+                margin-top: #{$space}px !important;
+            }
+        }
+    }
+}
+@mixin generate-padding-top-tablet() {
+    @each $space in $spaceamounts {
+        .pt-#{$space}-tablet {
+            @include breakpoint($bp-tablet) {
+                padding-top: #{$space}px !important;
+            }
+        }
+    }
+}
+@mixin generate-padding-bottom-tablet() {
+    @each $space in $spaceamounts {
+        .pb-#{$space}-tablet {
+            @include breakpoint($bp-tablet) {
+                padding-bottom: #{$space}px !important;
+            }
+        }
+    }
+}
+
+@include generate-margin-bottom();
+@include generate-margin-left();
+@include generate-margin-right();
+@include generate-margin-top();
+@include generate-padding-bottom();
+@include generate-padding-top();
+
+@include generate-margin-bottom-tablet();
+@include generate-margin-left-tablet();
+@include generate-margin-right-tablet();
+@include generate-margin-top-tablet();
+@include generate-padding-bottom-tablet();
+@include generate-padding-top-tablet();

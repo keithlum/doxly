@@ -1,0 +1,61 @@
+<div class="wrap-narrow">
+    <div class="box-middle">
+        <div class="inner">
+            <div class="center-logo"><a href="#"><%= image_tag "logo.svg" %></a></div>
+              <% if flash[:notice] %>
+                <div class="alert alert-success">
+                  <%= flash[:notice] %>
+                </div>
+              <% end %>
+              <% if flash[:error] %>
+                <div class="alert alert-danger">
+                  <%= flash[:error] %>
+                </div>
+              <% end %>
+            <div class="panel panel-window">
+                <%= form_for(:user, url: new_app_user_session_path, method: :post) do |f|%>
+                    <div class="form-group">
+                      <label htmlFor="input-email">Email Address</label>
+                      <%= f.text_field :email, id: 'input-email', class: 'form-control', placeholder: "example@doxly.com", required: true %>
+                    </div>
+
+                    <div class="form-group">
+                      <label htmlFor="input-password">Password</label>
+                      <%= f.password_field :password, id: 'input-password', class: 'form-control', placeholder: "Required", required: true %>
+                    </div>
+
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <div class="form-group">
+                            <div class="checkbox i-checks-box">
+                              <label>
+                                <%= f.check_box :remember_me %> Remember Me
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <%= f.submit 'Sign in', class: 'btn btn-primary' %>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+            </div>
+
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                          <%= link_to "Forgot your password?", new_app_user_password_path %>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        Don’t have an account? <a href="#">Sign Up.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

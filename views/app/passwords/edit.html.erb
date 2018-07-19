@@ -1,0 +1,58 @@
+<div class="wrap-narrow">
+    <div class="box-middle">
+        <div class="inner">
+            <div class="center-logo"><a href="#"><%= image_tag "logo.svg" %></a></div>
+              <% if flash[:notice] %>
+                <div class="alert alert-success">
+                  <%= flash[:notice] %>
+                </div>
+              <% end %>
+              <% if flash[:error] %>
+                <div class="alert alert-danger">
+                  <%= flash[:error] %>
+                </div>
+              <% end %>
+            <div class="panel panel-window">
+                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+                    <%= devise_error_messages! %>
+                    <%= f.hidden_field :reset_password_token %>
+                    
+                    <div class="form-group">
+                      <%= f.label :password, "New password" %>
+                      <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+                      <% end %>
+                      <%= f.password_field :password, autofocus: true, autocomplete: "off", class: 'form-control' %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.label :password_confirmation, "Confirm new password" %><br />
+                      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+                    </div>
+
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <%= f.submit "Reset my password", class: 'btn btn-primary' %>
+                        </div>
+                      </div>
+                    </div>
+                <% end %>
+            </div>
+
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                          <%= link_to "Back to Sign In", new_app_user_session_path %>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        Don’t have an account? <a href="#">Sign Up.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

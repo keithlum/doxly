@@ -1,0 +1,83 @@
+.panel-report{
+    border: 1px solid $col-border;
+    padding: 20px;
+
+    .title{
+        @extend %clearfix;
+        margin-bottom: 20px;
+        h4{
+            font-weight: 300;
+            font-size: 20px;
+            color: $col-dark-gray;
+            line-height: 42px;
+            float: left;
+        }
+
+        .period{
+            float: right;
+
+            .filter-option{
+                color: $col-dark-blue;
+            }
+        }
+    }
+    .report-legend{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        i{
+            display: inline-block;
+            font-style: normal;
+            font-size: 12px;
+            color: $col-gray;
+            margin-right: 20px;
+        }
+        span{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+
+    .team-list-item{
+        @extend %clearfix;
+        position: relative;
+        font-size: 0;
+        .team{
+            //float: left;
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - 110px);
+        }
+        .stat{
+            //float: left;
+            display: inline-block;
+            vertical-align: middle;
+            width: 55px;
+            text-align: center;
+            font-weight: 300;
+            font-size: 18px;
+            color: $col-dark-blue;
+        }
+        .graph{
+            //float: right;
+            display: inline-block;
+            width: 55px;
+            height: 25px;
+            vertical-align: middle;
+
+            svg{
+                vertical-align: bottom;
+            }
+        }
+
+        & + .team-list-item{
+            margin-top: 20px;
+        }
+    }
+    .report-user-bars{
+        height: 25px;
+    }
+}

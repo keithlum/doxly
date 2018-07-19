@@ -1,0 +1,528 @@
+.deal-project{
+
+}
+
+.deal-star{
+    display: inline-block;
+
+    i{
+        display: block;
+        color: $col-yellow;
+        font-size: 14px;
+
+        &:after{
+            @extend %icomoon;
+            @extend %icon-star-empty;
+            line-height: 28px;
+        }
+    }
+
+    &.favorite{
+        i{
+            &:after{
+                @extend %icon-star;
+            }
+        }
+    }
+
+    &:hover{
+        i{
+            color: $col-yellow-hover;
+        }
+    }
+}
+
+.deal-tabs{
+    width: 100%;
+    display: block;
+    clear: both;
+    border-bottom: 0px hidden;
+    //margin-bottom: 30px;
+
+    li{
+        &.deal-edit{
+            border: 0px none;
+            float: right;
+            a{
+                font-size: 12px;
+                padding: 5px 10px;
+                color: $col-blue;
+                border: 1px solid $col-border;
+                background: $white;
+                box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.10);
+                margin: 0 0 0 10px;
+
+                i{
+                    margin-right: 5px;
+                }
+
+                &:hover{
+                    color: $col-blue-hover;
+                }
+            }
+        }
+    }
+}
+
+.deal-section{
+
+    .deal-section-item{
+        @extend %clearfix;
+
+        & + .deal-section-item{
+            border-top: 1px solid $col-border;
+        }
+    }
+    .deal-section__header{
+        a{
+            display: block;
+            position: relative;
+            padding: 10px 10px 9px 20px;
+            background: $col-blue-light;
+            border-bottom: 1px solid $col-border;
+            font-weight: 500;
+            font-size: 10px;
+            color: $col-dark-gray;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+
+            &:hover{
+                background: $col-gray-light;
+            }
+
+            &:before{
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                @extend %icomoon;
+                @extend %icon-navigate-down;
+                font-size: 4px;
+                margin-top: -2px;
+            }
+            &.collapsed{
+                &:before{
+                    transform: rotate(180deg) translateX(3px);
+                }
+            }
+        }
+    }
+}
+
+.deal-tasks{
+
+    .deal-task-item{
+        box-shadow: inset 0px -1px 0px 0px #EFEFEF;
+        background: $col-green-light-3;
+        &:last-of-type{
+            box-shadow: none;
+        }
+
+        .deal-task-item__panel{
+            border-bottom: 1px solid $col-border;
+        }
+
+        &.deal-item-active{
+            background: $col-milk;
+        }
+    }
+    .deal-task-add-item{
+        padding: 0 0 0 20px;
+
+        a{
+            color: $col-blue;
+            letter-spacing: 0px;
+            line-height: 30px;
+            font-size: 14px;
+
+            &:hover{
+                color: $col-blue-hover;
+            }
+
+            i{
+                display: inline-block;
+                position: relative;
+                border-radius: 999px;
+                background: $col-blue;
+                color: $white;
+                font-size: 10px;
+                margin-right: 8px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                &:before{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.deal-task-item__header{
+    @extend %clearfix;
+    padding: 0 10px 0 0;
+
+    .badge-chat{
+        margin-top: 6px;
+        margin-left: 12px;
+        float: right;
+    }
+
+    .deal-item-active > &{
+        background: $col-blue;
+
+        .collapse-trigger{
+            color: $col-blue-light;
+        }
+
+        .badge-chat{
+            &:after{
+                background: $col-blue;
+            }
+        }
+    }
+}
+
+
+
+.deal-task-item__header-item{
+    display: inline-block;
+    padding: 0 0 0 50px;
+    position: relative;
+    font-size: 16px;
+    color: $col-dark-gray;
+    line-height: 40px;
+    //text-transform: uppercase;
+    &:hover{
+        color: $col-gray;
+    }
+    &:before{
+        content: "";
+        color: $col-green;
+        display: block;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $col-border;
+        left: 20px;
+        top: 50%;
+        margin-top: -10px;
+        border-radius: 999px;
+    }
+
+    .complete > .deal-task-item__header > &{
+        &:before{
+            @extend %icomoon;
+            @extend %icon-check;
+            font-size: 8px;
+            line-height: 18px;
+            text-align: center;
+            background: $col-green-light;
+            border: 2px solid $col-green;
+        }
+    }
+
+    .deal-item-active > .deal-task-item__header > &{
+        color: $white;
+        &:before{
+            color: $white;
+            background: $col-blue-hover;
+            border: 2px solid $col-dark-blue;
+        }
+    }
+}
+
+.deal-task-elements{
+
+    .deal-element-item{
+
+        .collapse-trigger{
+            line-height: 30px;
+        }
+
+        .item-header{
+            @extend %clearfix;
+            position: relative;
+            padding: 0 10px 0 50px;
+
+            .badge-chat{
+                margin-top: 3px;
+                float: right;
+            }
+            .item-header-item{
+                .badge{
+                    margin-left: 5px;
+                    background: $col-peach;
+                }
+            }
+            .badge-signed{
+                float: right;
+                margin-top: 5px;
+            }
+
+            &:before{
+                content: "";
+                color: $col-green;
+                display: block;
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border: 2px solid $col-border;
+                left: 20px;
+                top: 50%;
+                margin-top: -10px;
+                border-radius: 999px;
+            }
+
+        }
+
+        &.complete {
+            .item-header{
+                &:before{
+                    @extend %icomoon;
+                    @extend %icon-check;
+                    font-size: 8px;
+                    line-height: 18px;
+                    text-align: center;
+                    background: $col-green-light;
+                    border: 2px solid $col-green;
+                }
+            }
+        }
+
+        > .item-header{
+
+            > .item-header-item{
+                display: inline-block;
+                font-size: 12px;
+                color: $col-dark-gray;
+                line-height: 30px;
+                padding-left: 30px;
+                position: relative;
+
+                &:hover{
+                    color: $col-gray;
+                }
+
+                &:before{
+                    position: absolute;
+                    content: "";
+                    left: 3px;
+                    top: 50%;
+                    width: 16px;
+                    height: 16px;
+                    margin-top: -8px;
+                    background: url(image_path('icon-file.svg')) no-repeat 50% 50% / 12px 16px;
+                }
+            }
+        }
+
+
+        &.deal-element-item__folder{
+            > .item-header {
+                > .item-header-item {
+                    &:before{
+                        background: url(image_path("icon-folder.svg")) no-repeat 50% 50% / 16px 12px;
+                    }
+                }
+            }
+        }
+
+        &.deal-item-active{
+            > .item-header{
+                background: $col-blue;
+
+                &:before{
+                    color: $white;
+                    background: $col-blue-hover;
+                    border: 2px solid $col-dark-blue;
+                }
+
+                > .item-header-item {
+                    color: $white;
+                }
+                .badge-chat{
+                    &:after{
+                        background: $col-blue;
+                    }
+                }
+                .collapse-trigger{
+                    color: $col-blue-light;
+                }
+            }
+        }
+
+    }
+    .deal-element-add-item{
+        padding: 0 0 0 56px;
+
+        a{
+            font-size: 12px;
+            color: $col-blue;
+            letter-spacing: 0px;
+            line-height: 40px;
+            &:hover{
+                color: $col-blue-hover;
+            }
+
+            i{
+                font-size: 10px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+.deal-task-details{
+    padding: 20px;
+    background: $col-green-light-3;
+
+    .deal-task-details__header{
+        position: relative;
+        @extend %clearfix;
+        h4{
+            @include singleLine;
+            font-weight: 300;
+            font-size: 24px;
+            color: $col-dark-gray;
+            line-height: 30px;
+            padding-right: 60px;
+            float: left;
+        }
+
+        .badge{
+            background: $col-peach;
+        }
+
+        .dropdown{
+            display: inline-block;
+            float: right;
+
+            .dropdown-menu{
+                right: 0;
+                left: auto;
+            }
+        }
+
+        a.dropdown-toggle{
+            width: 30px;
+            height: 30px;
+            border: 1px solid $col-border;
+            line-height: 28px;
+            text-align: center;
+            background: $white;
+            display: inline-block;
+
+            &:hover{
+                border-color: $col-blue-focus;
+
+                color: $col-blue-hover;
+            }
+
+            i{
+                color: $col-blue;
+                font-size: 14px;
+            }
+        }
+    }
+    .deal-task-details__body{
+        font-size: 14px;
+        color: $col-gray;
+        line-height: 20px;
+        padding: 10px 0 0 0;
+
+        p{
+            font-size: 14px;
+            color: $col-gray;
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+    }
+    .deal-task-details__document{
+        padding: 10px 0 0 0;
+        .ico-document{
+            margin: 0 auto 10px;
+            position: relative;
+            width: 134px;
+            height: 177px;
+            background: url(image_path("icon-preview.svg")) no-repeat 50% 50% / 134px 177px;
+
+            .badge-signed{
+                position: absolute;
+                top: 10px;
+                right: 5px;
+            }
+        }
+        .buttons{
+            @extend %clearfix;
+            width: 134px;
+            margin: 0 auto;
+
+            .btn{
+                padding: 0;
+                min-width: auto;
+
+                & + .btn{
+                    float: right;
+                }
+            }
+        }
+    }
+    .collapse-trigger{
+        float: none;
+        color: $col-blue;
+
+        &:focus{
+            color: $col-blue;
+        }
+        &:hover{
+            color: $col-blue-hover;
+        }
+        i, span{
+        }
+    }
+
+}
+.deal-closing-book{
+    @extend .col-xs-12;
+    position: relative;
+
+    .buttons{
+        text-align: right;
+
+        .btn{
+            min-width: 0;
+            margin: 0 10px;
+        }
+    }
+}
+.deal-closing-book__inner{
+    max-width: 640px;
+    margin: 20px auto 40px;
+}
+
+.deal-closing-book__dummy-item{
+    border: 1px solid $col-border;
+    height: 500px;
+    position: relative;
+    @include vertical-align('.title');
+
+    .title{
+        width: 100%;
+
+        h3{
+            text-align: center;
+            font-weight: 300;
+            font-size: 36px;
+            color: $col-gray;
+        }
+        h4{
+            text-align: center;
+            font-weight: 300;
+            font-size: 24px;
+            color: $col-gray;
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="icon-folder" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 17 13" enable-background="new 0 0 17 13" xml:space="preserve">
+<title>icon-folder</title>
+<desc>Created with Sketch.</desc>
+<g id="icon-folder-symbols">
+	<g id="icon-folder-icons-folder-icon" transform="translate(1.000000, 1.000000)">
+		<g>
+			<path id="icon-folder-icon-folder" fill="#ECF4FD" d="M-0.5,10.5c0,0.5547,0.4453,1,1,1h14c0.5547,0,1-0.4453,1-1v-8
+				c0-0.5547-0.4453-1-1-1h-7L7,0.0391C6.9062-0.2578,6.5703-0.5,6.2812-0.5H0.5c-0.5547,0-1,0.4453-1,1V10.5z"/>
+			<path fill="#4A90E2" d="M14.5,12h-14C-0.3271,12-1,11.3271-1,10.5v-10C-1-0.3271-0.3271-1,0.5-1h5.7812
+				c0.5132,0,1.0381,0.3901,1.1953,0.8887L7.8574,1H14.5C15.3271,1,16,1.6729,16,2.5v8C16,11.3271,15.3271,12,14.5,12z M0.5,0
+				C0.2197,0,0,0.2197,0,0.5v10C0,10.7803,0.2197,11,0.5,11h14c0.2803,0,0.5-0.2197,0.5-0.5v-8C15,2.2197,14.7803,2,14.5,2H7.1426
+				L6.5269,0.2012C6.4937,0.0957,6.3467,0,6.2812,0H0.5z"/>
+		</g>
+	</g>
+</g>
+</svg>

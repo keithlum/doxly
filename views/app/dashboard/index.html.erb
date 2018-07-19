@@ -1,0 +1,108 @@
+<div id="wrapper">
+  <%= render "app/shared/left" %>
+  <div id="page-wrapper">
+    <%= render partial: "app/shared/top", locals: {title: 'Dashboard'} %>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="statistic-box">
+            <div class="statistic-box__item">
+              <i><%= @deal_stats[:active_deals] %></i><span>ACTIVE DEALS</span>
+            </div>
+            <div class="statistic-box__item">
+              <i><%= @deal_stats[:archived_deals] %></i><span>ARCHIVED DEALS</span>
+            </div>
+            <div class="statistic-box__item">
+              <i><%= @deal_stats[:team_members] %></i><span>TEAM MEMBERS</span>
+            </div>
+            <div class="statistic-box__item">
+              <i><%= @deal_stats[:outside_collaborators] %></i><span>OUTSIDE COLLABORATORS</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="content-left">
+            <% @events.each do |event| %>
+              <%= render 'app/shared/event', event: event %>
+            <% end %>
+          </div>
+          <div class="content-right">
+            <div class="panel summary-card">
+              <div class="panel-heading">
+                <h3 class="category">DEALS NEARING COMPLETION</h3>
+              </div>
+              <div class="panel-body">
+                <div class="summary-projects">
+                  <% if @deals_nearing_completion.empty? %>
+                    <div class="project-item-empty">
+                      No deals nearing completion
+                    </div>
+                  <% end %>
+                  <% @deals_nearing_completion.each do |deal| %>
+                    <div class="project-item">
+                      <div class="item-percent">
+                        <%= react_component 'ProgressPieChart', props: {percent: deal.completion_percent} %>
+                      </div>
+                      <div class="item-body">
+                        <%= link_to app_deal_path(deal), class: "item-body__project" do %>
+                          <div class="title"><%= deal.client_name %> <span class="timestamp"><%= deal.friendly_date %></span></div>
+                          <div class="copy"><%= deal.title %> <%= raw (deal.starred_by?(current_user) ? '<span class="star"></span>' : '') %></div>
+                        <% end %>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel summary-card">
+              <div class="panel-heading">
+                <h3 class="category">DEALS BEHIND SCHEDULE</h3>
+              </div>
+              <div class="panel-body">
+                <div class="summary-projects">
+                  <% if @deals_behind_schedule.empty? %>
+                    <div class="project-item-empty">
+                      No deals behind schedule
+                    </div>
+                  <% end %>
+                  <% @deals_behind_schedule.each do |deal| %>
+                    <div class="project-item">
+                      <div class="item-percent">
+                        <%= react_component 'ProgressPieChart', props: {percent: deal.completion_percent} %>
+                      </div>
+                      <div class="item-body">
+                        <%= link_to app_deal_path(deal), class: "item-body__project" do %>
+                          <div class="title"><%= deal.client_name %> <span class="timestamp"><%= deal.friendly_date %></span></div>
+                          <div class="copy"><%= deal.title %> <%= raw (deal.starred_by?(current_user) ? '<span class="star"></span>' : '') %></div>
+                        <% end %>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel summary-card">
+              <div class="panel-heading">
+                <h3 class="category">RECENTLY UPDATED FILES</h3>
+              </div>
+              <div class="panel-body">
+                <div class="summary-files">
+                  <% @recently_updated_files.each do |file| %>
+                    <div class="item item-<%= file.class == Document ? 'file' : 'folder'%>">
+                      <a href="#" class="details">
+                        <i><%= file.try(:file_name) || file.try(:name) %></i>
+                        <span>Added by <%= "#{file.try(:creator).try(:first_name) || file.try(:user).try(:first_name)} #{file.try(:creator).try(:last_name) || file.try(:user).try(:first_name)}" %> at <%= file.try(:creator).try(:organization).try(:name) || file.try(:user).try(:organization).try(:name) %></span>
+                      </a>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

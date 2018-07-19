@@ -1,0 +1,202 @@
+<div id="wrapper">
+  <%= render "left" %>
+  <div id="page-wrapper">
+    <%= render partial: "top", locals: {title: 'Team / Harvey Specter'} %>
+    <div class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="content-single">
+                  <div class="panel panel-team-description">
+                      <div class="inner">
+                          <div class="team-member-item">
+                              <a href="#">
+                                  <div class="avatar"><%= image_tag "img-avatar-5.png" %></div>
+                                  <h4>Harvey Specter</h4>
+                                  <span>harvey@spl.com</span>
+                              </a>
+                              <a href="#" data-toggle="modal" data-target="#modal-edit-user" class="btn-edit"><i class="icon-icon-edit"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="content-single">
+                  <div class="panel panel-deals-full">
+                      <div class="deals-full-group">
+                          <div class="deals-full-group__header">
+                              Active deals
+                          </div>
+                          <div class="deals-full-group__projects">
+                              <div class="project-item">
+                                  <div class="item-percent">
+                                      <div class="progress-pie-chart" data-percent="75"></div>
+                                  </div>
+                                  <div class="item-body">
+                                      <a href="#" class="item-body__project">
+                                          <div class="title">Cordellia Webb</div>
+                                          <div class="copy">Project Narwhal</div>
+                                      </a>
+                                      <div class="item-body__collaborators">
+                                          <div class="title">Collaborators</div>
+                                          <div class="item-collaborators-wraper">
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-1.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-no-avatar.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-4.png" %></a>
+                                          </div>
+                                      </div>
+                                      <div class="item-body__timestamp">
+                                          <div class="title"><span class="timestamp">March 18th</span></div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="project-item">
+                                  <div class="item-percent">
+                                      <div class="progress-pie-chart" data-percent="75"></div>
+                                  </div>
+                                  <div class="item-body">
+                                      <a href="#" class="item-body__project">
+                                          <div class="title">Cordellia Webb</div>
+                                          <div class="copy">Project Narwhal <span class="star"></span> </div>
+                                      </a>
+                                      <div class="item-body__collaborators">
+                                          <div class="title">Collaborators</div>
+                                          <div class="item-collaborators-wraper">
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-1.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-no-avatar.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-4.png" %></a>
+                                          </div>
+                                      </div>
+                                      <div class="item-body__timestamp">
+                                          <div class="title"><span class="timestamp">March 18th</span></div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="project-item">
+                                  <div class="item-percent">
+                                      <div class="progress-pie-chart" data-percent="75"></div>
+                                  </div>
+                                  <div class="item-body">
+                                      <a href="#" class="item-body__project">
+                                          <div class="title">Cordellia Webb</div>
+                                          <div class="copy">Project Narwhal</div>
+                                      </a>
+                                      <div class="item-body__collaborators">
+                                          <div class="title">Collaborators</div>
+                                          <div class="item-collaborators-wraper">
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-1.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-no-avatar.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-4.png" %></a>
+                                          </div>
+                                      </div>
+                                      <div class="item-body__timestamp">
+                                          <div class="title"><span class="timestamp">March 18th</span></div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="project-item">
+                                  <div class="item-percent">
+                                      <div class="progress-pie-chart" data-percent="50"></div>
+                                  </div>
+                                  <div class="item-body">
+                                      <a href="#" class="item-body__project">
+                                          <div class="title">Cordellia Webb</div>
+                                          <div class="copy">Project Narwhal <span class="star"></span></div>
+                                      </a>
+                                      <div class="item-body__collaborators">
+                                          <div class="title">Collaborators</div>
+                                          <div class="item-collaborators-wraper">
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-1.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-no-avatar.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-4.png" %></a>
+                                          </div>
+                                      </div>
+                                      <div class="item-body__timestamp">
+                                          <div class="title"><span class="timestamp">March 18th</span></div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="project-item">
+                                  <div class="item-percent">
+                                      <div class="progress-pie-chart" data-percent="25"></div>
+                                  </div>
+                                  <div class="item-body">
+                                      <a href="#" class="item-body__project">
+                                          <div class="title">Cordellia Webb</div>
+                                          <div class="copy">Project Narwhal</div>
+                                      </a>
+                                      <div class="item-body__collaborators">
+                                          <div class="title">Collaborators</div>
+                                          <div class="item-collaborators-wraper">
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-1.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-5.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-2.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-no-avatar.png" %></a>
+                                              <a href="#" class="avatar"><%= image_tag "img-avatar-4.png" %></a>
+                                          </div>
+                                      </div>
+                                      <div class="item-body__timestamp">
+                                          <div class="title"><span class="timestamp">March 18th</span></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-edit-user" tabindex="-1" role="dialog" aria-labelledby="modal-edit-user-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-edit-user-label">Edit User</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="input-user-photo">User Photo</label>
+                        <div class="upload-avatar">
+                            <div class="avatar-photo">
+                                <%= image_tag "img-avatar-5.png" %>
+                            </div>
+
+                            <div class="avatar-button">
+                                <input class="file-inputs" type="file" name="file_name" id="input-user-photo" title="Upload New" data-filename-placement="inside">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-user-fname">First Name</label>
+                        <input value="Harvey" type="text" name="user_fname" id="input-user-fname" class="form-control" placeholder="John" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-user-lname">Last Name</label>
+                        <input value="Specter" type="text" name="user_lname" id="input-user-lname" class="form-control" placeholder="Doe" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-user-email">Email Address</label>
+                        <input value="harvey@spl.com" type="text" name="user_email" id="input-user-email" class="form-control" placeholder="example@doxly.com" required="">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+    </div>
+</div>

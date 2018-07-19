@@ -1,0 +1,1290 @@
+<div id="wrapper" class="no-sidebar">
+        <div id="page-wrapper">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="navbar-brand">
+                    <div class="center-logo"><a href="#"><%= image_tag "logo.svg" %></a></div>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <%= image_tag "img-avatar.jpg", class: "img-circle navbar-avatar" %>
+                             <span>Harvey Specter</span> <i class="icon-icon-navigate-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                        <div class="clearfix">
+                            <div class="project-title pull-left">Project Panda</div>
+                            <ul class="nav flat-button-tabs pull-right" role="tablist">
+                                <li role="presentation" class="active"><a href="#tab-deal-diligence" aria-controls="tab-deal-diligence" role="tab" data-toggle="tab">Diligence</a></li>
+                                <li role="presentation"><a href="#tab-deal-closing" aria-controls="tab-deal-closing" role="tab" data-toggle="tab">Closing</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="tab-deal-diligence">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="toolbar-box">
+                                            <form>
+                                                <div class="search-input-box">
+                                                    <div class="form-group">
+                                                        <input name="search_str" class="input-search form-control" placeholder="Search Files"/>
+                                                    </div>
+                                                    <a href="#"><i class="icon-icon-search"></i></a>
+                                                </div>
+                                                <div class="dropdown dropdown-filter">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manual Sort</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="title">Show:</li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio" checked="checked"><i></i> All Deals </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio"><i></i> Open Deals </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio"><i></i> Closed Deals </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio"><i></i> Archived Deals </label></div></li>
+                                                        <li class="title">Sorted By:</li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_order" type="radio" checked="checked"><i></i> Project Close Date </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_order" type="radio"><i></i> Deal Title </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_order" type="radio"><i></i> Client Name </label></div></li>
+                                                    </ul>
+                                                </div>
+                                                <a href="#" class="btn-add-circle btn-add-deal" data-toggle="popover" data-content="<div class='popover-menu-deal'><a href='#' data-target='#modal-new-section' data-toggle='modal'>New Section</a><a href='#' data-target='#modal-new-task' data-toggle='modal'>New Task</a><a href='#' data-target='#modal-new-file' data-toggle='modal'>New File</a><a href='#' data-target='#modal-new-folder' data-toggle='modal'>New Folder</a></div>"></a>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="content-deal">
+                                            <div class="content-deal-wrapper">
+                                                <div class="content-deal-left">
+                                                    <div class="deal-section" id="deal-sections" role="tablist" aria-multiselectable="true">
+                                                        <div class="deal-section-item">
+                                                            <div class="deal-section__header" role="tab" id="section-id-1-header">
+                                                                <a role="button" data-toggle="collapse" data-parent="#deal-sections" href="#section-id-1-body" aria-expanded="true" aria-controls="section-id-1-body">CORPORATE STRUCTURE, EQUITY CAPITAL & RECORDS</a>
+                                                            </div>
+                                                            <div id="section-id-1-body" class="deal-section__panel collapse in" role="tabpanel" aria-labelledby="section-id-1-header">
+                                                                <div class="deal-section__panel-body">
+                                                                    <div class="deal-tasks">
+                                                                        <div class="deal-task-item "> <!-- Task item Start. DEV NOTE: class name for incomplete state for task item, add .complete for set complete state -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Partnerships, JVs and Subsidiaries</a>
+                                                                                <a class="collapse-trigger" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-1" aria-controls="section-1-task-1"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse in" id="section-1-task-1">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file"> <!-- DEV NOTE: class name for incomplete state for file, add .complete for set complete state -->
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Subcompany A</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__folder"> <!-- DEV NOTE: class name for incomplete state for file, add .complete for set complete state -->
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Subcompany B</a>
+                                                                                            <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-1-folder-1" aria-controls="section-1-task-1-folder-1"><span>Show 42 Files</span><i>Hide Files</i></a>
+                                                                                        </div>
+                                                                                        <div class="deal-element-folder-wrapper collapse" id="section-1-task-1-folder-1">
+                                                                                            <div class="deal-element-folder-elements">
+                                                                                                <div class="deal-element-item deal-element-item__file">
+                                                                                                    <div class="item-header">
+                                                                                                        <a class="item-header-item" href="#">Subcompany B-1</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="deal-element-item deal-element-item__file">
+                                                                                                    <div class="item-header">
+                                                                                                        <a class="item-header-item" href="#">Subcompany B-2</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="deal-element-item deal-element-item__file complete">
+                                                                                                    <div class="item-header">
+                                                                                                        <a class="item-header-item" href="#">Subcompany B-3</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="deal-element-item deal-element-item__file complete">
+                                                                                                    <div class="item-header">
+                                                                                                        <a class="item-header-item" href="#">Subcompany B-4</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="deal-element-item deal-element-item__file complete">
+                                                                                                    <div class="item-header">
+                                                                                                        <a class="item-header-item" href="#">Subcompany B-5</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="deal-element-item deal-element-item__file complete">
+                                                                                                    <div class="item-header">
+                                                                                                        <a class="item-header-item" href="#">Subcompany B-6</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Joint Venture C</a>
+                                                                                            <div class="badge-chat"><span>2</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete deal-item-active"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Meeting Minutes</a>
+                                                                                <div class="badge-chat"><span>3</span></div>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-2" aria-controls="section-1-task-2"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-2">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - May 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - July 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - August 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - September 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - October 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Meeting Materials Provided to BOD</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-3" aria-controls="section-1-task-3"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-3">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Materials - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Materials - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Materials - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Materials - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Annual and Quarterly Reports</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-4" aria-controls="section-1-task-4"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-4">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Annual and Quarterly Reports - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Annual and Quarterly Reports - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Annual and Quarterly Reports - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Annual and Quarterly Reports - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Correspondance Related to Blue Sky Laws</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-5" aria-controls="section-1-task-5"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-5">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Correspondance - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Correspondance - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Correspondance - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Correspondance - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Equity Interest Claims</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-6" aria-controls="section-1-task-6"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-6">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Equity Interest Claims - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Equity Interest Claims - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Equity Interest Claims - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Equity Interest Claims - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Conflict of Interest, Code of Ethics and Corrrrrrrr</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-7" aria-controls="section-1-task-7"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-7">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Conflict - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Conflict - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Conflict - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Conflict - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Options, Warrants, and other Commitments</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-8" aria-controls="section-1-task-8"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-8">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">409 Valuations</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-9" aria-controls="section-1-task-9"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-9">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Valuations - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Valuations - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Valuations - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Valuations - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Offering Circulars, PPMs, Etc.</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-1-task-10" aria-controls="section-1-task-10"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-1-task-10">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Offering - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Offering - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Offering - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Offering - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+
+                                                                        <div class="deal-task-add-item">
+                                                                            <a href="#"><i class="icon-icon-plus"></i> Add a Task</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="deal-section-item">
+                                                            <div class="deal-section__header" role="tab" id="section-header-id-2">
+                                                                <a role="button" data-toggle="collapse" data-parent="#deal-sections" href="#section-id-2" aria-expanded="true" aria-controls="section-id-2">FINANCIAL DATA, FINANCINGS AND INDEBTEDNESS</a>
+                                                            </div>
+                                                            <div id="section-id-2" class="deal-section__panel collapse in" role="tabpanel" aria-labelledby="section-header-id-2">
+                                                                <div class="deal-section__panel-body">
+                                                                    <div class="deal-tasks">
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Options, Warrants, and other Commitments</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-2-task-1" aria-controls="section-2-task-1"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-2-task-1">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Options, Warrants, and other Commitments</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-2-task-2" aria-controls="section-2-task-2"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-2-task-2">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Options, Warrants, and other Commitments</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-2-task-3" aria-controls="section-2-task-3"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-2-task-3">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+
+
+                                                                        <div class="deal-task-add-item">
+                                                                            <a href="#"><i class="icon-icon-plus"></i> Add a Task</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-deal-right">
+                                                    <div class="deal-task-details">
+                                                        <div class="deal-task-details__header">
+                                                            <h4>Meeting Minutes</h4>
+                                                            <a href="#"><i class="icon-icon-edit"></i></a>
+                                                        </div>
+                                                        <div class="deal-task-details__body collapse in" id="deal-task-details__body">
+                                                            <p>To the extent not previously provided, all minutes of meetings and written consents of the board of directors and stockholders.</p>
+                                                        </div>
+                                                        <a class="collapse-trigger" role="button" data-toggle="collapse" aria-expanded="false" href="#deal-task-details__body" aria-controls="deal-task-details__body"><span>Show Description</span><i>Hide Description</i></a>
+                                                    </div>
+                                                    <div class="chat-box chat-box-small">
+                                                        <div class="chat-box-toggle">
+                                                            <div class="btn-group">
+                                                                <a class="btn toggle-active" href="#deal-chat-1-internal">Internal Chat</a>
+                                                                <a class="btn" href="#deal-chat-1-external">External Chat</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="chat-box-details">
+                                                            <div class="chat-box-details__instance internal toggle-active" id="deal-chat-1-internal">
+                                                                <div class="chat-box__recipients">
+                                                                    <div class="chat-box__recipients-wrapper">
+                                                                        <div class="recipients-items">
+                                                                            <%= image_tag "img-avatar-2.png", class: "avatar" %></a>
+                                                                            <%= image_tag "img-avatar-3.png", class: "avatar" %></a>
+                                                                        </div>
+                                                                        <a href="#" class="recipient-add"><i class="icon-icon-plus-circle"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__messages">
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-from">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                                        <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__send">
+                                                                    <form>
+                                                                        <input class="chat-box__message form-control" name="send_message_internal"/>
+                                                                        <a class="btn btn-primary" href="#">Send</a>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="chat-box-details__instance external" id="deal-chat-1-external">
+                                                                <div class="chat-box__recipients">
+                                                                    <div class="chat-box__recipients-wrapper">
+                                                                        <div class="recipients-items">
+                                                                            <a href="#" class="avatar"><%= image_tag "img-avatar-2.png" %></a>
+                                                                            <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                                                        </div>
+                                                                        <a href="#" class="recipient-add"><i class="icon-icon-plus-circle"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__messages">
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-from">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                                        <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-from">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                                        <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__send">
+                                                                    <form>
+                                                                        <input class="chat-box__message form-control" name="send_message_internal"/>
+                                                                        <a class="btn btn-primary" href="#">Send</a>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- tab panel Diligence End -->
+                            <div role="tabpanel" class="tab-pane" id="tab-deal-closing">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="toolbar-box">
+                                            <form>
+                                                <div class="search-input-box">
+                                                    <div class="form-group">
+                                                        <input name="search_str" class="input-search form-control" placeholder="Search Files"/>
+                                                    </div>
+                                                    <a href="#"><i class="icon-icon-search"></i></a>
+                                                </div>
+                                                <div class="dropdown dropdown-filter">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manual Sort</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="title">Show:</li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio" checked="checked"><i></i> All Deals </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio"><i></i> Open Deals </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio"><i></i> Closed Deals </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_show" type="radio"><i></i> Archived Deals </label></div></li>
+                                                        <li class="title">Sorted By:</li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_order" type="radio" checked="checked"><i></i> Project Close Date </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_order" type="radio"><i></i> Deal Title </label></div></li>
+                                                        <li><div class="checkbox i-checks-box"><label> <input name="filter_order" type="radio"><i></i> Client Name </label></div></li>
+                                                    </ul>
+                                                </div>
+                                                <a href="#" class="btn-add-circle btn-add-deal" data-toggle="popover" data-content="<div class='popover-menu-deal'><a href='#' data-target='#modal-new-section' data-toggle='modal'>New Section</a><a href='#' data-target='#modal-new-task' data-toggle='modal'>New Task</a><a href='#' data-target='#modal-new-file' data-toggle='modal'>New File</a><a href='#' data-target='#modal-new-folder' data-toggle='modal'>New Folder</a></div>"></a>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="content-deal">
+                                            <div class="content-deal-wrapper">
+                                                <div class="content-deal-left">
+                                                    <div class="deal-section" id="deal-sections-closing" role="tablist" aria-multiselectable="true">
+                                                        <div class="deal-section-item">
+                                                            <div class="deal-section__header" role="tab" id="section-closing-id-1-header">
+                                                                <a role="button" data-toggle="collapse" data-parent="#deal-sections-closing" href="#section-closing-id-1-body" aria-expanded="true" aria-controls="section-closing-id-1-body">PRE-CLOSING</a>
+                                                            </div>
+                                                            <div id="section-closing-id-1-body" class="deal-section__panel collapse in" role="tabpanel" aria-labelledby="section-closing-id-1-header">
+                                                                <div class="deal-section__panel-body">
+                                                                    <div class="deal-tasks">
+                                                                        <div class="deal-task-item complete">
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Term Sheet</a>
+                                                                                <a class="collapse-trigger" role="button" data-toggle="collapse" aria-expanded="false" href="#section-closing-1-task-1" aria-controls="section-closing-1-task-1"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse in" id="section-closing-1-task-1">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file deal-item-active">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Term Sheet <span class="badge">V9</span> </a>
+                                                                                            <div class="badge-signed signed">3/3 signed</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Diligence</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-closing-1-task-2" aria-controls="section-closing-1-task-2"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-closing-1-task-2">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - May 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - July 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - August 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - September 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Meeting Minutes - October 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-add-item">
+                                                                            <a href="#"><i class="icon-icon-plus"></i> Add a Task</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="deal-section-item">
+                                                            <div class="deal-section__header" role="tab" id="section-closing-header-id-2">
+                                                                <a role="button" data-toggle="collapse" data-parent="#deal-sections" href="#section-closing-id-2" aria-expanded="true" aria-controls="section-closing-id-2">Closing</a>
+                                                            </div>
+                                                            <div id="section-closing-id-2" class="deal-section__panel collapse in" role="tabpanel" aria-labelledby="section-closing-header-id-2">
+                                                                <div class="deal-section__panel-body">
+                                                                    <div class="deal-tasks">
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Partnerships, JVs and Subsidiaries</a>
+                                                                                <a class="collapse-trigger " role="button" data-toggle="collapse" aria-expanded="false" href="#section-closing-2-task-1" aria-controls="section-closing-2-task-1"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse in" id="section-closing-2-task-1">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - February 2015</a>
+                                                                                            <div class="badge-signed">0/3 signed</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Options, Warrants, and other Commitments</a>
+                                                                                <a class="collapse-trigger" role="button" data-toggle="collapse" aria-expanded="false" href="#section-closing-2-task-2" aria-controls="section-closing-2-task-2"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse in" id="section-closing-2-task-2">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+                                                                        <div class="deal-task-item complete"> <!-- Task item Start -->
+                                                                            <div class="deal-task-item__header">
+                                                                                <a class="deal-task-item__header-item" href="#">Options, Warrants, and other Commitments</a>
+                                                                                <a class="collapse-trigger collapsed" role="button" data-toggle="collapse" aria-expanded="false" href="#section-closing-2-task-3" aria-controls="section-closing-2-task-3"><span>Show Files</span><i>Hide Files</i></a>
+                                                                            </div>
+                                                                            <div class="deal-task-item__panel collapse" id="section-closing-2-task-3">
+                                                                                <div class="deal-task-elements">
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - January 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - February 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - March 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-item deal-element-item__file complete">
+                                                                                        <div class="item-header">
+                                                                                            <a class="item-header-item" href="#">Options, Warrants - April 2015</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="deal-element-add-item">
+                                                                                        <a href="#"><i class="icon-icon-plus"></i> Add a File or Folder</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- Task item End -->
+
+
+                                                                        <div class="deal-task-add-item">
+                                                                            <a href="#"><i class="icon-icon-plus"></i> Add a Task</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-deal-right">
+                                                    <div class="deal-task-details">
+                                                        <div class="deal-task-details__header">
+                                                            <h4>Term Sheet <span class="badge">V9</span> </h4>
+                                                            <a href="#"><i class="icon-icon-edit"></i></a>
+                                                        </div>
+                                                        <div class="deal-task-details__body">
+                                                            <p>Uploaded by Haley Altman at Ice Miller on 3/21/2016 at 11:30 PM</p>
+                                                        </div>
+                                                        <div class="deal-task-details__document">
+                                                            <div class="ico-document">
+                                                                <div class="badge-signed signed">3/3 signed</div>
+                                                            </div>
+                                                            <div class="buttons">
+                                                                <a href="#" class="btn btn-link">View</a>
+                                                                <a href="#" class="btn btn-link">Download</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chat-box chat-box-small">
+                                                        <div class="chat-box-toggle">
+                                                            <div class="btn-group">
+                                                                <a class="btn toggle-active" href="#deal-chat-close-internal">Internal Chat</a>
+                                                                <a class="btn" href="#deal-chat-close-external">External Chat</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="chat-box-details">
+                                                            <div class="chat-box-details__instance internal toggle-active" id="deal-chat-close-internal">
+                                                                <div class="chat-box__recipients">
+                                                                    <div class="chat-box__recipients-wrapper">
+                                                                        <div class="recipients-items">
+                                                                            <a href="#" class="avatar"><%= image_tag "img-avatar-2.png" %></a>
+                                                                            <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                                                        </div>
+                                                                        <a href="#" class="recipient-add"><i class="icon-icon-plus-circle"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__messages">
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-from">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                                        <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__send">
+                                                                    <form>
+                                                                        <input class="chat-box__message form-control" name="send_message_internal"/>
+                                                                        <a class="btn btn-primary" href="#">Send</a>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="chat-box-details__instance external" id="deal-chat-close-external">
+                                                                <div class="chat-box__recipients">
+                                                                    <div class="chat-box__recipients-wrapper">
+                                                                        <div class="recipients-items">
+                                                                            <a href="#" class="avatar"><%= image_tag "img-avatar-2.png" %></a>
+                                                                            <a href="#" class="avatar"><%= image_tag "img-avatar-3.png" %></a>
+                                                                        </div>
+                                                                        <a href="#" class="recipient-add"><i class="icon-icon-plus-circle"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__messages">
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Looks like we’re missing the June Meeting Minutes.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-from">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                                        <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-to">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-2.png" %></div>
+                                                                        <div class="comment-message"><span>Sounds good. Thanks!</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                    <div class="comment-item comment-from">
+                                                                        <div class="comment-avatar"><%= image_tag "img-avatar-3.png" %></div>
+                                                                        <div class="comment-message"><span>Cancelled due to weather.</span></div>
+                                                                        <div class="timestamp">March 23 at 1:21 PM</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chat-box__send">
+                                                                    <form>
+                                                                        <input class="chat-box__message form-control" name="send_message_internal"/>
+                                                                        <a class="btn btn-primary" href="#">Send</a>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- tab panel Closing End -->
+                        </div> <!-- tab content End -->
+                    </div>
+
+                </div>
+                <div class="row">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modal-edit-deal" tabindex="-1" role="dialog" aria-labelledby="modal-edit-deal-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-edit-deal-label">Edit Deal</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="input-deal-title">Deal Title</label>
+                                        <input value="Project Panda" type="text" name="deal_title" id="input-deal-title" class="form-control" placeholder="Give your task a title" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-client">Client Name</label>
+                                        <input value="Panda Express" type="text" name="deal_client" id="input-deal-client" class="form-control" placeholder="Add your client's name or other identifier" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-date">Projected Close Date</label>
+                                        <input value="07/24/16" type="text" name="deal_date" id="input-deal-date" class="form-control" placeholder="MM/DD/YYYY" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-transaction">Transaction Type</label>
+                                        <select id="input-deal-transaction" class="selectpicker form-control show-tick">
+                                            <option selected="selected">Merger</option>
+                                            <option>Type 2</option>
+                                            <option>Type 3</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input-deal-size">Deal Size</label>
+                                        <input value="$1,500,000,000" type="text" name="deal_size" id="input-deal-size" class="form-control" placeholder="$" required="">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="input-deal-collaborators">Collaborators</label>
+                                        <input type="text" name="deal_collaborators_input" id="input-deal-collaborators" class="form-control" placeholder="Enter a name or email address"/>
+                                        <div class="deal-collaborators-widget">
+                                            <ul>
+                                                <li data-collaborator-id="1">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-2.png", class: "avatar" %>
+                                                         Alex Vaughn
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="5">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-3.png", class: "avatar" %> Harvey Specter
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="9">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-4.png", class: "avatar" %> Rebecca Moss
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="12">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-5.png", class: "avatar" %> Louisa Curtis
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="18">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-6.png", class: "avatar" %> Cecilia Hopkins
+                                                    </a>
+                                                </li>
+                                                <li data-collaborator-id="92">
+                                                    <a href="#">
+                                                        <%= image_tag "img-avatar-1.png", class: "avatar" %> Alvin Jones
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-new-section" tabindex="-1" role="dialog" aria-labelledby="modal-new-section-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-section-label">New Section</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-section-title">Section Title</label>
+                            <input type="text" name="deal_title" id="input-section-title" class="form-control" placeholder="Give your section a title" required="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-new-task" tabindex="-1" role="dialog" aria-labelledby="modal-new-task-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-task-label">New Task</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-task-title">Task Title</label>
+                            <input type="text" name="task_title" id="input-task-title" class="form-control" placeholder="Give your task a title" required="">
+                        </div>
+                        <div class="form-group optional">
+                            <label for="input-task-desc">Task Description</label>
+                            <textarea rows="5" name="task_desc" id="input-task-desc" class="form-control" placeholder="Explain this task" ></textarea>
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-task-section">Add to Section</label>
+                            <select name="task_section" id="input-task-section" class="selectpicker form-control show-tick">
+                                <option>Select a Section</option>
+                                <option>Section 1</option>
+                                <option>Section 2</option>
+                                <option>Section 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-task-assignee">Add an Assignee</label>
+                            <select name="task_assignee" id="input-task-assignee" class="selectpicker form-control show-tick">
+                                <option>Select a Team Member</option>
+                                <option>Team Member 1</option>
+                                <option>Team Member 2</option>
+                                <option>Team Member 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-new-file" tabindex="-1" role="dialog" aria-labelledby="modal-new-file-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-file-label">New Section</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-section-title">Upload</label>
+                            <input class="file-inputs" type="file" name="file_name" id="input-file-title" title="<i class='icon-icon-uploadcloud'></i> Choose a File" data-filename-placement="inside">
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-file-section">Add to Section</label>
+                            <select name="file_section" id="input-file-section" class="selectpicker form-control show-tick">
+                                <option>Select a Section</option>
+                                <option>Section 1</option>
+                                <option>Section 2</option>
+                                <option>Section 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-new-folder" tabindex="-1" role="dialog" aria-labelledby="modal-new-folder-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-new-folder-label">New Folder</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-folder-title">Folder Name</label>
+                            <input type="text" name="folder_name" id="input-folder-title" class="form-control" placeholder="Give your folder a name" required="">
+                        </div>
+
+                        <div class="form-group optional">
+                            <label for="input-folder-section">Add to Section</label>
+                            <select name="folder_section" id="input-folder-section" class="selectpicker form-control show-tick">
+                                <option>Select a Section</option>
+                                <option>Section 1</option>
+                                <option>Section 2</option>
+                                <option>Section 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>

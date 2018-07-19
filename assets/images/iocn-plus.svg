@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>iocn-plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Add-Task-Icon" transform="translate(-5.000000, -5.000000)" fill="#FFFFFF">
+            <path d="M11.0400391,15 C11.1572266,15 11.25,14.9072266 11.25,14.7900391 L11.25,11.25 L14.7900391,11.25 C14.9072266,11.25 15,11.1572266 15,11.0400391 L15,8.95996094 C15,8.84277344 14.9072266,8.75 14.7900391,8.75 L11.25,8.75 L11.25,5.20996094 C11.25,5.09277344 11.1572266,5 11.0400391,5 L8.95996094,5 C8.84277344,5 8.75,5.09277344 8.75,5.20996094 L8.75,8.75 L5.20996094,8.75 C5.09277344,8.75 5,8.84277344 5,8.95996094 L5,11.0400391 C5,11.1572266 5.09277344,11.25 5.20996094,11.25 L8.75,11.25 L8.75,14.7900391 C8.75,14.9072266 8.84277344,15 8.95996094,15 L11.0400391,15 Z" id="iocn-plus"></path>
+        </g>
+    </g>
+</svg>

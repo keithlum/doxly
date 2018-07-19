@@ -1,0 +1,8 @@
+<div class="panel activity-card">
+  <div class="panel-heading">
+    <h3 class="category"><%= event.title %></h3><i class="timestamp"><%= event.date %></i>
+  </div>
+  <div class="panel-body">
+    <%= render "app/events/#{event.action.downcase}", event: event %>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deal:</strong>
+  <%= @deal_collaborator.deal_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @deal_collaborator.user_id %>
+</p>
+
+<p>
+  <strong>Added by:</strong>
+  <%= @deal_collaborator.added_by %>
+</p>
+
+<%= link_to 'Edit', edit_deal_collaborator_path(@deal_collaborator) %> |
+<%= link_to 'Back', deal_collaborators_path %>

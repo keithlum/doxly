@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Task-/-Completed-Task---Highlighted" transform="translate(-5.000000, -6.000000)" fill="#FFFFFF">
+            <path d="M14.9414062,7.85644531 C15.0244141,7.77832031 15.0244141,7.63671875 14.9414062,7.55859375 L13.4814453,6.09863281 C13.4033203,6.02050781 13.2617188,6.02050781 13.1835938,6.09863281 L8.75,10.5419922 L6.81640625,8.59863281 C6.73828125,8.52050781 6.59667969,8.52050781 6.51855469,8.59863281 L5.05859375,10.0585938 C4.97558594,10.1367188 4.97558594,10.2783203 5.05859375,10.3564453 L8.59863281,13.9013672 C8.64746094,13.9355469 8.69140625,13.9599609 8.75,13.9599609 C8.80859375,13.9599609 8.85253906,13.9355469 8.90136719,13.9013672 L14.9414062,7.85644531 Z" id="icon-check"></path>
+        </g>
+    </g>
+</svg>

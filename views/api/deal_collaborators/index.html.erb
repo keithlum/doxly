@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deal Collaborators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Deal</th>
+      <th>User</th>
+      <th>Added by</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deal_collaborators.each do |deal_collaborator| %>
+      <tr>
+        <td><%= deal_collaborator.deal_id %></td>
+        <td><%= deal_collaborator.user_id %></td>
+        <td><%= deal_collaborator.added_by %></td>
+        <td><%= link_to 'Show', deal_collaborator %></td>
+        <td><%= link_to 'Edit', edit_deal_collaborator_path(deal_collaborator) %></td>
+        <td><%= link_to 'Destroy', deal_collaborator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deal Collaborator', new_deal_collaborator_path %>

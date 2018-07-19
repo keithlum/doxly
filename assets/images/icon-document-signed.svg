@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="63px" height="83px" viewBox="0 0 63 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-document-signed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard@2x" transform="translate(-209.000000, -233.000000)">
+            <g id="Activity" transform="translate(200.000000, 169.000000)">
+                <g id="Group-14">
+                    <g id="Group-13">
+                        <g id="icon-document-signed" transform="translate(10.000000, 65.000000)">
+                            <rect id="Rectangle-263" stroke="#979797" fill="#FFFFFF" x="0" y="0" width="61" height="81"></rect>
+                            <rect id="Rectangle-182-Copy" fill="#D1DAE3" x="3.18656716" y="4.57627119" width="20.9402985" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-4" fill="#D1DAE3" x="3.18656716" y="24.7118644" width="53.7164179" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-2" fill="#D1DAE3" x="3.18656716" y="12.8135593" width="13.6567164" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-5" fill="#D1DAE3" x="3.18656716" y="32.9491525" width="49.1641791" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-8" fill="#D1DAE3" x="3.18656716" y="48.0508475" width="39.9458955" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-11" fill="#D1DAE3" x="3.18656716" y="63.6101695" width="50.9850746" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy" fill="#D1DAE3" x="3.18656716" y="8.69491525" width="18.2089552" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-6" fill="#D1DAE3" x="3.18656716" y="28.8305085" width="46.7099286" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-9" fill="#D1DAE3" x="3.18656716" y="43.9322034" width="45.5223881" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-12" fill="#D1DAE3" x="3.18656716" y="59.4915254" width="53.261194" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-7" fill="#D1DAE3" x="3.18656716" y="37.0677966" width="50.9850746" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-10" fill="#D1DAE3" x="3.18656716" y="52.1694915" width="41.4253731" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy-13" fill="#D1DAE3" x="3.18656716" y="67.7288136" width="16.8432836" height="2.28813559" rx="1"></rect>
+                            <rect id="Rectangle-182-Copy" fill="#98D5CC" x="30.5" y="4.57627119" width="25.9477612" height="9.15254237" rx="2"></rect>
+                            <text id="SIGNED" font-family=".HelveticaNeueDeskInterface-Regular, .Helvetica Neue DeskInterface" font-size="5.46268657" font-weight="normal" fill="#376B64">
+                                <tspan x="32.9738806" y="10.9491525">SIGNED</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

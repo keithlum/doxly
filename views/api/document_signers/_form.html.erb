@@ -1,0 +1,37 @@
+<%= form_for(document_signer) do |f| %>
+  <% if document_signer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(document_signer.errors.count, "error") %> prohibited this document_signer from being saved:</h2>
+
+      <ul>
+      <% document_signer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :document_id %>
+    <%= f.number_field :document_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :signed %>
+    <%= f.check_box :signed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :signed_at %>
+    <%= f.datetime_select :signed_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

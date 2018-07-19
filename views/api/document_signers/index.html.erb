@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Document Signers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Document</th>
+      <th>User</th>
+      <th>Signed</th>
+      <th>Signed at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @document_signers.each do |document_signer| %>
+      <tr>
+        <td><%= document_signer.document_id %></td>
+        <td><%= document_signer.user_id %></td>
+        <td><%= document_signer.signed %></td>
+        <td><%= document_signer.signed_at %></td>
+        <td><%= link_to 'Show', document_signer %></td>
+        <td><%= link_to 'Edit', edit_document_signer_path(document_signer) %></td>
+        <td><%= link_to 'Destroy', document_signer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document Signer', new_document_signer_path %>
